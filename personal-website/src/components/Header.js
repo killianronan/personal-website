@@ -1,17 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./../App.css";
 
+//do preload
 function Header() {
   return (
     <header className="header">
-      <h1 className="title">John Doe</h1>
-      <p className="subtitle">Software Developer</p>
+      <div className="name-role my-logo-image">
+        {/* <div className="my-logo-image"></div> */}
+        <h2 className="title"></h2>
+        <p className="subtitle">Software Developer</p>
+      </div>
       <nav className="nav">
-        <a className="link" href="#Home">Home</a>
-        <a className="link" href="#Projects">Projects</a>
-        <a className="link" href="#About">About</a>
-        <a className="link" href="#Contact">Contact</a>
+        <Link className="link" to="/">Home</Link>
+        <Link className="link" to="/about">About</Link>
+        <Link className="link" to="/skills">Skills</Link>
+        <Link className="link" to="/projects">Projects</Link>
       </nav>
+      <div className="name-role">
+        <button className="resumebtn" onClick={() => {window.open("https://drive.google.com/file/d/1XGKmkF2tqkeZXGGggs1U_Z1eB9_8qTdB/view");}}>Resume</button>
+      </div>
     </header>
   );
 }

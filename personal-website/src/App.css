@@ -1,52 +1,228 @@
-/* Header.module.css */
+/* main elements styling */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "League Spartan";
+  background-image: linear-gradient(
+    45deg,
+    /* Purple -> Pink -> Peach */
+    /* #800080 0%,
+    #ffc0cb 50%,
+    #FFCBA4 100% */
+
+    /* Light Red -> Amber -> Light green */
+    /* #ff4d4d 0%,
+    #FFBF00 70%,
+    lightgreen 100% */
+
+    /* Light Blue -> Light Pink */
+    /* #A9C9FF 0%,
+    #FFBBEC 100% */
+
+    /* Light Blue -> Light Pink */
+    /* #A9C9FF 0%,
+    #ff00cc 50%,
+    #FFBBEC 100% */
+
+    /* #4158d0 0%, */
+    Purple 0%,
+    #ffcc70 100%
+  );
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
-  background-color: #333;
   color: #fff;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.4); */
 }
-.testing{
-  background-color: red;
-  padding: 100px;
+
+.name-role{
+  padding: 10px;
+  flex-grow: 1;
+  color: black;
 }
+
 .title {
   margin: 0;
 }
 
 .subtitle {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .nav {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content:flex-start;
+  flex-grow: 10;
 }
 
 .link {
-  color: #fff;
+  color: black;
   text-decoration: none;
-  padding: 10px;
-  margin: 0 10px;
+  padding: 25px;
 }
 
-/* About.module.css */
+.link:hover {
+  color: white;
+}
+
+.footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.footer-content{
+  margin: 10px;
+}
 
 .section {
-  background-color: #f8f8f8;
-  padding: 50px;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-start;
 }
 
-.heading {
-  font-size: 36px;
-  margin-bottom: 30px;
+.resumebtn {
+  border-radius: 20px;
+  padding: 5px 25px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  border: none;
+  /* background-image: linear-gradient(45deg, #ff4d4d 0%, #FFBF00 70%); */
+  background-image: linear-gradient(
+    45deg, 
+    #A9C9FF 0%,
+  #FFBBEC 100%
+  );
+}
+
+.resumebtn:hover {
+  cursor: pointer;
+}
+
+/* Home element */
+.home-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.imagedeveloper {
+  /* height: auto;
+  width: auto; */
+  /* background-image: url(./assets/software-dev.png); */
+  min-height: 500px;
+  background-image: url(./assets/web-design.webp);
+  background-size: cover;
+  /* background-position:right; */
+  flex-grow: 1;
+}
+
+.my-logo-image {
+  /* height: auto;
+  width: auto; */
+  /* background-image: url(./assets/software-dev.png); */
+  /* min-height: 00px; */
+  background-image: url(./assets/KR-dev.png);
+  background-size: cover;
+  background-position:center;
+  /* flex-grow: 1; */
+}
+
+.testing{
+  background-color: red;
+  flex-grow: 1;
+}
+
+.greeting-container{
+  flex-grow: 1;
+  align-self: center;
   text-align: center;
 }
 
+.icon-list{
+  display: flex;
+  justify-content: row;
+  justify-content: center;
+}
+
+.icon{
+  font-size: 50px;
+  padding: 5px;
+  margin: 0 30px 0 0px;
+}
+
+.icon:hover{
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, .4);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+}
+
+.image-container{
+  flex-grow: 1;
+}
+
+.heading {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
 .text {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.5;
-  text-align: justify;
-  max-width: 600px;
-  margin: 0 auto;
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
 }
