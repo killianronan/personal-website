@@ -1,10 +1,59 @@
+/* Fonts */
+@font-face {
+  font-family: "Black";   /*Can be any text*/
+  src: local("MontserratAlt1-Black"),
+    url("./fonts/ttf/MontserratAlt1-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bold";   /*Can be any text*/
+  src: local("MontserratAlt1-Bold"),
+    url("./fonts/ttf/MontserratAlt1-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ExtraBold";   /*Can be any text*/
+  src: local("MontserratAlt1-ExtraBold"),
+    url("./fonts/ttf/MontserratAlt1-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ExtraLight";   /*Can be any text*/
+  src: local("MontserratAlt1-ExtraLight"),
+    url("./fonts/ttf/MontserratAlt1-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("MontserratAlt1-Light"),
+    url("./fonts/ttf/MontserratAlt1-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Medium";   /*Can be any text*/
+  src: local("MontserratAlt1-Medium"),
+    url("./fonts/ttf/MontserratAlt1-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Regular";   /*Can be any text*/
+  src: local("MontserratAlt1-Regular"),
+    url("./fonts/ttf/MontserratAlt1-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SemiBold";   /*Can be any text*/
+  src: local("MontserratAlt1-SemiBold"),
+    url("./fonts/ttf/MontserratAlt1-SemiBold.ttf") format("truetype");
+}
+
 /* main elements styling */
 html, body {
   height: 100%;
   margin: 0;
+  
   font-family: "League Spartan";
+  /* font-family: "SemiBold"; */
+  color: white;
+
   background-image: linear-gradient(
-    45deg,
+    /* 45deg, */
+    /* 111.1deg, */
+    /* to top, */
+    to right,
     /* Purple -> Pink -> Peach */
     /* #800080 0%,
     #ffc0cb 50%,
@@ -25,9 +74,19 @@ html, body {
     #FFBBEC 100% */
 
     /* #4158d0 0%, */
-    Purple 0%,
-    #ffcc70 100%
-  );
+    /* Purple 0%,
+    #ffcc70 100% */
+
+    /*  */
+    /* rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2% */
+    /* #7474bf, #348ac7 */
+
+    /* #283E51, #0A2342 */
+    black 0%,#131862 150%
+    /* #131862 0%, black 100% */
+    /* black 0%, silver 100% */
+    );
+  
 }
 
 .app-container {
@@ -48,22 +107,25 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border-bottom: 0.5px solid rgba(255, 255, 255, 0.4); */
+  padding-bottom: 30px;
 }
 
 .name-role{
   padding: 10px;
   flex-grow: 1;
-  color: black;
+  color: white;
+  text-align: center;
 }
 
 .title {
   margin: 0;
+  font-family: "Bold";
 }
 
 .subtitle {
   margin: 0;
   font-size: 1.25rem;
+  font-family: "Regular";
 }
 
 .nav {
@@ -73,13 +135,14 @@ html, body {
 }
 
 .link {
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 25px;
+  font-size: 25px;
 }
 
 .link:hover {
-  color: white;
+  color: #FFBF00;
 }
 
 .footer {
@@ -91,6 +154,7 @@ html, body {
 
 .footer-content{
   margin: 10px;
+  color: white;
 }
 
 .section {
@@ -105,36 +169,112 @@ html, body {
 .resumebtn {
   border-radius: 20px;
   padding: 5px 25px;
-  font-weight: bold;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  /* font-weight: bold; */
+  font-size: 25px;
+  font-family: "League Spartan";
+  box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 5px;
   border: none;
+  color: white;
   /* background-image: linear-gradient(45deg, #ff4d4d 0%, #FFBF00 70%); */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     45deg, 
     #A9C9FF 0%,
   #FFBBEC 100%
-  );
+  ); */
+  background-image: linear-gradient( 86.3deg,  rgba(0,119,182,1) 3.6%, rgba(8,24,68,1) 87.6% );
+  /* background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
 }
 
 .resumebtn:hover {
   cursor: pointer;
+  /* color: black; */
+  /* background-color: rgba(255, 255, 255, .4); */
+  background-image: rgba(255, 255, 255, .4);
+  /* box-shadow: rgba(29, 29, 83, 0.4) 0px 0px 5px; */
 }
 
 /* Home element */
 .home-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* padding-top: 150px; */
+}
+
+.about-content-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  /* max-width: 1-0%; */
+  /* padding-top: 150px; */
+}
+.about-content{
+  padding: 15px 15px 30px 15px;
+  background-color: rgb(128, 128, 128, 0.2); 
+  border-radius: 15%;
+  min-height: 40vh;
+  min-width: 40vh;
+  max-width: 35%;
+}
+.intro{
+  /* text-align: start; */
+  /* flex-grow: 1; */
+  width: 100%;
+  color: white;
+  /* margin: auto; */
+  /* padding: 20px; */
+  /* max-width: 10vw; */
+}
+
+.skill-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill-item{
+  padding: 5px;
+  background-color: rgb(211, 211, 211, 0.5);
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .imagedeveloper {
   /* height: auto;
   width: auto; */
   /* background-image: url(./assets/software-dev.png); */
-  min-height: 500px;
-  background-image: url(./assets/web-design.webp);
-  background-size: cover;
-  /* background-position:right; */
+  /* min-height: 500px; */
+  background-image: url(./assets/12.png);
+  min-height: 50vh;
+  min-width: 60vh;
+  background-size:100% 100%;
+  /* justify-self: stretch; */
+}
+
+.image-container{
+  /* align-self: center; */
+}
+
+.greeting-container{
+  text-align: center;
+  margin-bottom: 25px;
+  /* min-width: 350px; */
+}
+.intro{
+  /* text-align: start; */
   flex-grow: 1;
+  width: 100%;
+  color: white;
+  /* margin: auto; */
+  /* padding: 20px; */
+  max-width: 20vw;
 }
 
 .my-logo-image {
@@ -153,16 +293,13 @@ html, body {
   flex-grow: 1;
 }
 
-.greeting-container{
-  flex-grow: 1;
-  align-self: center;
-  text-align: center;
-}
 
 .icon-list{
   display: flex;
   justify-content: row;
   justify-content: center;
+  color: white;
+  padding: 20px;
 }
 
 .icon{
@@ -178,18 +315,27 @@ html, body {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
 }
 
-.image-container{
-  flex-grow: 1;
-}
 
 .heading {
   font-size: 48px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  font-family: "League Spartan";
+  color: white;
+  text-align: center;
 }
 
 .text {
   font-size: 24px;
   line-height: 1.5;
+  font-family: "League Spartan";
+  color: white;
+}
+
+.intro-text{
+  font-size: 17px;
+  line-height: 1.5;
+  font-family: "League Spartan";
+  color: white;
 }
 
 .wave {
@@ -225,4 +371,68 @@ html, body {
   100% {
     transform: rotate(0deg);
   }
+}
+
+
+
+/* Projects element */
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.projects-item{
+  /* background-color: red; */
+  flex-basis: 22%;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 20px;
+  height: 40vh;
+  
+  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, */
+  /* rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px !important; */
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  background-color: red;
+  /* border: transparent; */
+  /* opacity: 0.9 !important; */
+  /* transition: all 0.5s ease 0s !important; */
+}
+.project-background{
+  background-color: green;
+}
+
+.projects-item:hover{
+  cursor: pointer;
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px !important;
+}
+
+/* .project-image-container{
+  display: flex;
+  justify-content: center;
+} */
+
+.image-project {
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* height: auto;
+  width: auto; */
+  /* background-image: url(./assets/software-dev.png); */
+  /* min-height: 500px; */
+  /* background-image: url(./assets/pngegg.png); */
+  /* min-height: 50vh;
+  min-width: 60vh; */
+  /* width: 50%; */
+  /* height: 200px; */
+  /* background-size:contain; */
+  /* background-repeat: no-repeat; */
+  /* justify-self: stretch; */
+}
+
+.about-container{
+
 }

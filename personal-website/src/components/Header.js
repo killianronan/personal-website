@@ -6,10 +6,10 @@ import "./../App.css";
 function Header() {
   return (
     <header className="header">
-      <div className="name-role my-logo-image">
+      <div className="name-role">
         {/* <div className="my-logo-image"></div> */}
-        <h2 className="title"></h2>
-        <p className="subtitle">Software Developer</p>
+        <h2 className="title">Killian Ronan</h2>
+        <p className="subtitle">Software Development</p>
       </div>
       <nav className="nav">
         <Link className="link" to="/">Home</Link>
