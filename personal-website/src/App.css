@@ -1,93 +1,60 @@
-/* Fonts */
 @font-face {
-  font-family: "Black";   /*Can be any text*/
+  font-family: "Black";
   src: local("MontserratAlt1-Black"),
     url("./fonts/ttf/MontserratAlt1-Black.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Bold";   /*Can be any text*/
+  font-family: "Bold";
   src: local("MontserratAlt1-Bold"),
     url("./fonts/ttf/MontserratAlt1-Bold.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "ExtraBold";   /*Can be any text*/
+  font-family: "ExtraBold";
   src: local("MontserratAlt1-ExtraBold"),
     url("./fonts/ttf/MontserratAlt1-ExtraBold.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "ExtraLight";   /*Can be any text*/
+  font-family: "ExtraLight";
   src: local("MontserratAlt1-ExtraLight"),
     url("./fonts/ttf/MontserratAlt1-ExtraLight.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Light";   /*Can be any text*/
+  font-family: "Light";
   src: local("MontserratAlt1-Light"),
     url("./fonts/ttf/MontserratAlt1-Light.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Medium";   /*Can be any text*/
+  font-family: "Medium";
   src: local("MontserratAlt1-Medium"),
     url("./fonts/ttf/MontserratAlt1-Medium.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "Regular";   /*Can be any text*/
+  font-family: "Regular";
   src: local("MontserratAlt1-Regular"),
     url("./fonts/ttf/MontserratAlt1-Regular.ttf") format("truetype");
 }
+
 @font-face {
-  font-family: "SemiBold";   /*Can be any text*/
+  font-family: "SemiBold";
   src: local("MontserratAlt1-SemiBold"),
     url("./fonts/ttf/MontserratAlt1-SemiBold.ttf") format("truetype");
 }
 
-/* main elements styling */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
-  
   font-family: "League Spartan";
   /* font-family: "SemiBold"; */
   color: white;
-
-  background-image: linear-gradient(
-    /* 45deg, */
-    /* 111.1deg, */
-    /* to top, */
-    135deg,
-    /* Purple -> Pink -> Peach */
-    /* #800080 0%,
-    #ffc0cb 50%,
-    #FFCBA4 100% */
-
-    /* Light Red -> Amber -> Light green */
-    /* #ff4d4d 0%,
-    #FFBF00 70%,
-    lightgreen 100% */
-
-    /* Light Blue -> Light Pink */
-    /* #A9C9FF 0%,
-    #FFBBEC 100% */
-
-    /* Light Blue -> Light Pink */
-    /* #A9C9FF 0%,
-    #ff00cc 50%,
-    #FFBBEC 100% */
-
-    /* #4158d0 0%, */
-    /* Purple 0%,
-    #ffcc70 100% */
-
-    /*  */
-    /* rgb(0, 40, 70) -4.8%, rgb(255, 115, 115) 82.7%, rgb(255, 175, 123) 97.2% */
-    /* #7474bf, #348ac7 */
-
-    /* #283E51, #0A2342 */
-    black,#131862
-    /* #131862 0%, black 100% */
-    /* black 0%, silver 100% */
-    );
-    /* background-image: linear-gradient(135deg, #7B71DD, #3165CA); */
-
+  background-image: linear-gradient(135deg,
+      black, #131862);
 }
 
 .app-container {
@@ -103,481 +70,11 @@ html, body {
   align-items: flex-start;
 }
 
-.header {
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.name-role{
-  padding: 10px;
-  flex-grow: 1;
-  color: white;
-  text-align: center;
-}
-
-.title {
-  /* background-image: linear-gradient(135deg, #4200CE, #8C28D3); */
-  /* color: linear-gradient(135deg, #4200CE, #8C28D3); */
-  margin: 0;
-  font-family: "Bold";
-}
-
-.subtitle {
-  margin: 0;
-  font-size: 1.25rem;
-  font-family: "Regular";
-}
-
-.nav {
-  display: flex;
-  justify-content:flex-start;
-  flex-grow: 10;
-}
-
-.link {
-  color: white;
-  text-decoration: none;
-  padding: 25px;
-  font-size: 25px;
-}
-
-.link:hover {
-  color: #FFBF00;
-}
-
-.footer {
-  position:absolute;
-  left:0;
-  bottom:0;
-  right:0;
-}
-
-.footer-content{
-  margin: 10px;
-  color: white;
-}
-
 .section {
-  min-height: 100%;
+  /* min-height: 100%; */
   min-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: center;
-}
-
-.resumebtn {
-  border-radius: 20px;
-  padding: 5px 25px;
-  /* font-weight: bold; */
-  font-size: 25px;
-  font-family: "League Spartan";
-  box-shadow: black 5px 5px 5px;
-  border: none;
-  color: white;
-  /* background-image: linear-gradient(45deg, #ff4d4d 0%, #FFBF00 70%); */
-  /* background-image: linear-gradient(
-    45deg, 
-    #A9C9FF 0%,
-  #FFBBEC 100%
-  ); */
-  /* background-image: linear-gradient(135deg, #4200CE, #8C28D3); */
-  background-image: linear-gradient(135deg, #4200CE, midnightblue)
-
-  /* background-image: linear-gradient( 86.3deg,  rgba(0,119,182,1) 3.6%, rgba(8,24,68,1) 87.6% ); */
-  /* background-image: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%); */
-}
-
-.resumebtn:hover {
-  cursor: pointer;
-  /* color: black; */
-  /* background-color: rgba(255, 255, 255, .4); */
-  background-image: rgba(255, 255, 255, .4);
-  /* box-shadow: rgba(29, 29, 83, 0.4) 0px 0px 5px; */
-}
-
-/* Home element */
-.home-container {
-  /* height: 100; */
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.bio-container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.about-content{
-  padding: 15px 15px 30px 15px;
-  background-color: rgb(128, 128, 128, 0.2); 
-  border-radius: 15%;
-  min-height: 40vh;
-  min-width: 40vh;
-  max-width: 35%;
-}
-.intro{
-  /* text-align: start; */
-  /* flex-grow: 1; */
-  width: 100%;
-  color: white;
-  /* margin: auto; */
-  /* padding: 20px; */
-  /* max-width: 10vw; */
-}
-
-.skill-list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.skill-item{
-  padding: 5px;
-  background-color: rgb(211, 211, 211, 0.2);
-  /* opacity: 0.2; */
-  color: white;
-  font-weight: bold;
-  margin: 10px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagedeveloper {
-  background-image: url(./assets/12.png);
-  min-height: 40vh;
-  background-size: 70% 100%;
-  background-repeat: no-repeat;
-}
-
-.greeting-container,
-.image-container {
-  flex: 1;
-}
-
-.greeting-container{
-  text-align: center;
-  margin-bottom: 50px;
-  /* align-self: center; */
-  /* max-width: 300px; */
-}
-.intro{
-  /* text-align: start; */
-  flex-grow: 1;
-  width: 100%;
-  color: white;
-  /* margin: auto; */
-  /* padding: 20px; */
-  max-width: 20vw;
-}
-
-.my-logo-image {
-  /* height: auto;
-  width: auto; */
-  /* background-image: url(./assets/software-dev.png); */
-  /* min-height: 00px; */
-  background-image: url(./assets/KR-dev.png);
-  background-size: cover;
-  background-position:center;
-  /* flex-grow: 1; */
-}
-
-.testing{
-  background-color: red;
-  flex-grow: 1;
-}
-
-
-.icon-list{
-  display: flex;
-  justify-content: row;
-  justify-content: center;
-  color: white;
-  padding: 20px;
-}
-
-.icon{
-  font-size: 50px;
-  padding: 5px;
-  margin: 0 30px 0 0px;
-}
-
-.project-icon{
-  align-self: center;
-  justify-self: flex-start;
-  width: 30%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-.card-body-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-title{
-  font-size: 24px;
-  font-family: "League Spartan";
-  color: white;
-  /* text-align: center; */
-  justify-self: flex-end;
-  align-self: flex-end;
-}
-
-.icon-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  flex-basis: 30%;
-}
-
-.project-repo-icon {
-  background: black;
-  width: 50px; /* Adjusted for a fixed size */
-  height: 50px; /* Adjusted for a fixed size */
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.project-repo-icon:hover {
-  cursor: pointer;
-  background-color: rgb(0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 5px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.icon-wrapper:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-.skill-icon{
-  font-size: 50px;
-  padding: 5px;
-  align-self: center;
-}
-
-.icon:hover{
-  cursor: pointer;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, .4);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
-}
-
-
-.heading {
-  font-size: 48px;
-  margin-bottom: 15px;
-  font-family: "League Spartan";
-  color: white;
-  text-align: center;
-  justify-self: center;
-  align-self: center;
-}
-
-.text {
-  font-size: 24px;
-  line-height: 1.5;
-  font-family: "League Spartan";
-  color: white;
-}
-
-.intro-text{
-  font-size: 17px;
-  line-height: 1.5;
-  font-family: "League Spartan";
-  color: white;
-}
-
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-/* Projects element */
-.projects-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-.projects-item{
-  cursor:default;
-  /* background-color: red; */
-  padding: 20px;
-  max-height: 35vh;
-  flex: 0 0 33.333%;
-  box-sizing: border-box; 
-  margin: 5px; /* Example margin; adjust as needed */
-  flex-basis: calc(28% - 10px);
-  /* flex-basis: 22%; */
-  /* margin: 30px; */
-  /* padding: 10px; */
-  border-radius: 20px;
-  /* height: 40vh; */
-  background-image: linear-gradient(135deg, #4200CE, midnightblue);
-  color: white;
-}
-.project-background{
-  background-color: green;
-}
-
-.projects-item:hover{
-  cursor: pointer;
-  transform: scale(1.02) !important;
-  overflow: hidden !important;
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
-    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px !important;
-}
-
-.about-container{
- /* border: 1px solid white; */
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
-}
-
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
-  /* border: 1px solid white; */
-  width: 40%;
-  height: 60vh;
-  perspective: 1000px;  /* 3D effect */
-}
-
-/* This container is needed to position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  border-radius: 25px;
-  box-shadow: black 20px 20px 20px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  /* box-shadow: black 0px 0px 0px; */
-
-  /* background-image: linear-gradient(to left, #7B71DD, #3165CA); */
-  background-image: linear-gradient(135deg, #4200CE, midnightblue);
-  
-  /* background-image: linear-gradient(to left, #878787, #515151); */
-  /* background-image: linear-gradient(to left,midnightblue 0%, black 150%); */
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  /* background-image: linear-gradient(to right,midnightblue 0%, black 150%); */
-  /* background: #7B71DD; */
-  /* background-image: linear-gradient(to left, #7B71DD, #3165CA); */
-  background-image: linear-gradient(135deg, #4200CE, #8C28D3);
-
-  /* background-color: midnightblue; */
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.glow {
-  font-size: 80px;
-  color: #fff;
-  text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px red, 0 0 20px blue, 0 0 30px red, 0 0 40px blue, 0 0 50px black, 0 0 60px blue, 0 0 70px black;
-  }
-  to {
-    text-shadow: 0 0 20px #4200CE, 0 0 30px #4200CE, 0 0 40px white, 0 0 50px black, 0 0 60px black, 0 0 70px black, 0 0 80px black;
-  }
 }

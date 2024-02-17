@@ -1,0 +1,110 @@
+.home-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.greeting-container {
+    text-align: center;
+    margin-bottom: 50px;
+    flex: 1;
+}
+
+.heading {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-family: "League Spartan";
+    color: white;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.wave {
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.text {
+    font-size: 24px;
+    line-height: 1.5;
+    font-family: "League Spartan";
+    color: white;
+}
+
+.icon-list {
+    display: flex;
+    justify-content: row;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.icon {
+    font-size: 50px;
+    padding: 5px;
+    margin: 0 30px 0 0px;
+}
+
+.icon:hover{
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .4);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  }
+
+.development-image {
+    background-image: url(./../../assets/12.png);
+    min-height: 40vh;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+}

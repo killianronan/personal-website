@@ -1,8 +1,7 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import "./../App.css";
+import "./Home.css";
 import Typewriter from "typewriter-effect";
-
 
 function Home() {
   return (
@@ -31,7 +30,7 @@ function Home() {
             </div>
           </div>
           <div className="image-container">
-            <div className="imagedeveloper"></div>
+            <div className="development-image"></div>
           </div>
         </div>
       </section>

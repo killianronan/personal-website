@@ -1,0 +1,77 @@
+.header {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.name-role {
+    padding: 10px;
+    flex-grow: 1;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-family: "Bold";
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: "Regular";
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-grow: 10;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+    font-size: 25px;
+}
+
+.link:hover {
+    color: #FFBF00;
+}
+
+.resume-button {
+    border-radius: 20px;
+    padding: 5px 25px;
+    font-size: 25px;
+    font-family: "League Spartan";
+    box-shadow: black 5px 5px 5px;
+    border: none;
+    color: white;
+    background-image: linear-gradient(135deg, #4200CE, midnightblue)
+  }
+  
+  .resume-button:hover {
+    cursor: pointer;
+    background-image: rgba(255, 255, 255, .4);
+  }
+
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px red, 0 0 20px blue, 0 0 30px red, 0 0 40px blue, 0 0 50px black, 0 0 60px blue, 0 0 70px black;
+    }
+    to {
+      text-shadow: 0 0 20px #4200CE, 0 0 30px #4200CE, 0 0 40px white, 0 0 50px black, 0 0 60px black, 0 0 70px black, 0 0 80px black;
+    }
+  }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./../App.css";
+import "./Projects.css";
 import Card from 'react-bootstrap/Card';
 import { SiScikitlearn } from "react-icons/si";
 import { FaReact, FaGithub } from "react-icons/fa";

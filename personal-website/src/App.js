@@ -4,11 +4,11 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Header from "./components/Header";
-import About from "./components/About";
-import Home from "./components/Home";
-import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Header from "./components/header/Header";
+import About from "./components/about/About";
+import Home from "./components/home/Home";
+import Projects from "./components/projects/Projects";
+import Footer from "./components/footer/Footer";
 import "./App.css";
 import "@fontsource/league-spartan"; // Defaults to weight 400.
 import 'bootstrap/dist/css/bootstrap.min.css';
