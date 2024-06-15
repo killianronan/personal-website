@@ -27,16 +27,12 @@
 }
 
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-    /* border: 1px solid white; */
     width: 40%;
     height: 60vh;
     perspective: 1000px;
-    /* 3D effect */
 }
 
-/* This container is needed to position the front and back side */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -46,12 +42,10 @@
     transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
     border-radius: 25px;
@@ -60,34 +54,18 @@
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
-    /* Safari */
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
-    /* box-shadow: black 0px 0px 0px; */
-
-    /* background-image: linear-gradient(to left, #7B71DD, #3165CA); */
     background-image: linear-gradient(135deg, #4200CE, midnightblue);
-
-    /* background-image: linear-gradient(to left, #878787, #515151); */
-    /* background-image: linear-gradient(to left,midnightblue 0%, black 150%); */
-    color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
-    /* background-image: linear-gradient(to right,midnightblue 0%, black 150%); */
-    /* background: #7B71DD; */
-    /* background-image: linear-gradient(to left, #7B71DD, #3165CA); */
     background-image: linear-gradient(135deg, #4200CE, #8C28D3);
-
-    /* background-color: midnightblue; */
-    color: white;
     transform: rotateY(180deg);
 }
 
@@ -102,10 +80,11 @@
 }
 
 .intro-text {
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.5;
     font-family: "League Spartan";
     color: white;
+    padding: 10px;
 }
 
 .skill-list {
@@ -118,7 +97,6 @@
 .skill-item {
     padding: 5px;
     background-color: rgb(211, 211, 211, 0.2);
-    /* opacity: 0.2; */
     color: white;
     font-weight: bold;
     margin: 10px;
