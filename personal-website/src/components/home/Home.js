@@ -27,21 +27,21 @@ function Home() {
           </div>
           <nav className="icon-list">
             <FaGithub
-              className="icon"
+              className="icon github"
               aria-label="GitHub"
               onClick={() => {
                 window.open("https://github.com/killianronan/");
               }}
             />
             <FaLinkedin
-              className="icon"
+              className="icon linkedin"
               aria-label="LinkedIn"
               onClick={() => {
                 window.open("https://www.linkedin.com/in/killian-ronan-9b5150194/");
               }}
             />
             <FaInstagram
-              className="icon"
+              className="icon insta"
               aria-label="Instagram"
               onClick={() => {
                 window.open("https://instagram.com/killianronan99");

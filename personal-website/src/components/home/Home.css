@@ -14,7 +14,8 @@
     text-align: center;
     margin-bottom: 50px;
     flex: 1;
-} 
+}
+
 .heading {
     font-size: 48px;
     margin-bottom: 15px;
@@ -86,18 +87,35 @@
     font-size: 50px;
     padding: 5px;
     margin: 0 30px 0 0px;
+    border-radius: 20px;
 }
 
-.icon:hover{
+.icon:hover {
     cursor: pointer;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, .4);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
-  }
+    transform: scale(1.1);
+}
 
 .development-image {
     background-image: url(./../../assets/12.png);
     min-height: 40vh;
     background-size: 70% 100%;
     background-repeat: no-repeat;
+}
+
+.insta{
+    background: linear-gradient(45deg,
+            #feda75,
+            #fa7e1e,
+            #d62976,
+            #962fbf,
+            #4f5bd5);
+}
+
+.linkedin{
+    background: #0077B5;
+}
+
+.github{
+    background: black;
 }
