@@ -1,9 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaHome, FaUser, FaProjectDiagram } from "react-icons/fa";
 import "./Header.css";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <header className="header">
       <div className="name-role glow">
@@ -11,15 +13,15 @@ function Header() {
         <p className="subtitle">Software Development</p>
       </div>
       <nav className="nav">
-        <Link className="link" to="/">
+        <Link className={`link ${location.pathname === '/' ? 'active' : ''}`} to="/">
           <span className="nav-text">Home</span>
           <FaHome className="nav-icon" />
         </Link>
-        <Link className="link" to="/about">
+        <Link className={`link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
           <span className="nav-text">About</span>
           <FaUser className="nav-icon" />
         </Link>
-        <Link className="link" to="/projects">
+        <Link className={`link ${location.pathname === '/projects' ? 'active' : ''}`} to="/projects">
           <span className="nav-text">Projects</span>
           <FaProjectDiagram className="nav-icon" />
         </Link>
