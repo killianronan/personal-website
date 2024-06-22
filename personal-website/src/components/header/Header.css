@@ -1,26 +1,34 @@
 .header {
   color: #fff;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 15px;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .name-role {
-  padding: 10px;
-  flex-grow: 1;
+  padding: 0 10px;
   color: white;
   text-align: center;
+  flex-grow: 1;
 }
 
 .title {
   margin: 0;
   font-family: "Bold";
+  font-size: 1.5rem;
 }
 
 .subtitle {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-family: "Regular";
 }
 
@@ -28,13 +36,32 @@
   display: flex;
   justify-content: flex-start;
   flex-grow: 10;
+  flex-wrap: nowrap; /* Ensure items don't wrap */
 }
 
 .link {
   color: white;
   text-decoration: none;
-  padding: 25px;
-  font-size: 25px;
+  padding: 15px 20px;
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-text {
+  margin-left: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-icon {
+  margin-left: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  color: #61dafb;
 }
 
 .link:hover {
@@ -43,27 +70,25 @@
 
 .resume-button {
   border-radius: 20px;
-  padding: 5px 25px;
-  font-size: 25px;
+  padding: 5px 15px;
+  font-size: 18px;
   font-family: "League Spartan";
-  box-shadow: black 5px 5px 5px;
+  box-shadow: black 3px 3px 5px;
   border: none;
   color: white;
-  background-image: linear-gradient(135deg, #4200CE, midnightblue)
+  background-image: linear-gradient(135deg, #536dfe, #1a237e);
+  transition: background-image 0.3s;
 }
 
 .resume-button:hover {
   cursor: pointer;
-  background-image: rgba(255, 255, 255, .4);
+  background-image: linear-gradient(135deg, #536dfe, #00bfff);
 }
 
-
 .glow {
-  font-size: 80px;
+  font-size: 1.8rem;
   color: #fff;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -74,5 +99,186 @@
 
   to {
     text-shadow: 0 0 20px #4200CE, 0 0 30px #4200CE, 0 0 40px white, 0 0 50px black, 0 0 60px black, 0 0 70px black, 0 0 80px black;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 8px 16px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .link {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .link:hover .nav-text {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  
+  .link:hover .nav-icon {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+
+  .nav-icon {
+    font-size: 22px;
+  }
+
+  .resume-button {
+    padding: 4px 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 6px 12px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .link {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .link:hover .nav-text {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  
+  .link:hover .nav-icon {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+
+  .nav-icon {
+    font-size: 20px;
+  }
+
+  .resume-button {
+    padding: 3px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    padding: 4px 8px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 0.7rem;
+  }
+
+  .link {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .link:hover .nav-text {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  
+  .link:hover .nav-icon {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+  }
+
+  .resume-button {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    padding: 2px 4px;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .subtitle {
+    font-size: 0.6rem;
+  }
+
+  .link {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .link:hover .nav-text {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  
+  .link:hover .nav-icon {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+
+  .nav-icon {
+    font-size: 16px;
+  }
+
+  .resume-button {
+    padding: 1px 4px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 0.8rem;
+  }
+  
+  .link:hover .nav-icon {
+    transform: translateX(0px);
+  }
+
+  .subtitle {
+    font-size: 0.4rem;
+  }
+
+  .nav-text {
+    display: none; /* Hide the text */
+  }
+
+  .nav-icon {
+    opacity: 1;
+    left: 0;
+    font-size: 20px; /* Increase the size of the icon */
+    margin-left: 25px; /* Reset margin-left to avoid unnecessary space */
+  }
+
+  .link {
+    flex: 1; /* Ensure links take equal space */
   }
 }
