@@ -7,26 +7,23 @@ import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import "./App.css";
 import "@fontsource/league-spartan"; // Defaults to weight 400.
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {TracingBeam} from './components/tracingbeam/TracingBeam';
+import { TracingBeam } from './components/tracingbeam/TracingBeam';
 
 const App = () => {
   return (
     <div className="app-container">
       <Header />
-      <main className="main-container">
-        <Section id="home">
-          <Home />
+      <Section id="home">
+        <Home />
+      </Section>
+      <TracingBeam className="px-6">
+        <Section id="about">
+          <About />
         </Section>
-        <TracingBeam className="px-6">
-          <Section id="about">
-            <About />
-          </Section>
-        </TracingBeam>
-        <Section id="projects">
-          <Projects />
-        </Section>
-      </main>
+      </TracingBeam>
+      <Section id="projects">
+        <Projects />
+      </Section>
       <Footer />
     </div>
   );

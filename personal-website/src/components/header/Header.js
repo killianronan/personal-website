@@ -7,14 +7,13 @@ function Header() {
   const [activeLink, setActiveLink] = useState("home");
 
   const handleSetActive = (to) => {
-    console.log("HERE", to);
     setActiveLink(to);
   };
 
   return (
     <header className="header">
       <div className="name-role glow">
-        <h2 className="title">Killian Ronan</h2>
+        <h2 className="name">Killian Ronan</h2>
         <p className="subtitle">Software Engineer</p>
       </div>
       <nav className="nav">

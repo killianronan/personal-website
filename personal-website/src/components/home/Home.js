@@ -6,7 +6,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <section className="section min-h-screen bg-dot-pattern" style={{ position: 'relative', overflow: 'hidden' }}>
+    <section className="section min-h-screen" style={{ position: 'relative', overflow: 'hidden' }}>
       <SVGAnimation />
       <div className="home-container">
         <header className="greeting-container">
