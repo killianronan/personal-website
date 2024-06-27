@@ -10,11 +10,12 @@
   z-index: 1000;
   box-sizing: border-box;
   flex-wrap: wrap;
+  background-color: black;
+  border-bottom: 0.5px solid lightgray;
 }
 
 .name-role {
   padding: 0 10px;
-  color: white;
   text-align: center;
   flex-grow: 1;
 }
@@ -33,30 +34,34 @@
 
 .nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-grow: 10;
   flex-wrap: nowrap; /* Ensure items don't wrap */
 }
 
 .link {
   color: white;
+  /* color: cyan; */
   text-decoration: none;
   padding: 15px 20px;
   font-size: 18px;
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  margin-right: 50px;
+  cursor: pointer;
 }
 
 .link.active {
-  color: #61dafb; 
-  border-bottom: 2px solid #61dafb; 
-}
-
-.link.active:hover {
-  color: #61dafb; 
-  border-bottom: 2px solid #61dafb; 
+  color: white; 
+  /* border-bottom: 2px solid white;  */
+  border-left: 2px solid white; 
+  border-right: 2px solid white; 
+  transform: scale(1.1);
+  border: 1px solid white;
+  /* background: linear-gradient(135deg, #000, #0d47a1); */
+  background-image: linear-gradient(135deg, #536dfe, #1a237e);
+  border-radius: 50%;
 }
 
 .nav-text {
@@ -93,7 +98,7 @@
 
 .resume-button:hover {
   cursor: pointer;
-  background-image: linear-gradient(135deg, #536dfe, #00bfff);
+  transform: scale(1.1);
 }
 
 .glow {

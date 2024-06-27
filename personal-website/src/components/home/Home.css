@@ -1,39 +1,189 @@
-  .home-container {
-    padding: 80px 20px 20px; /* Adjusted for fixed header */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* background: linear-gradient(135deg, #000, #0d47a1); Updated gradient */
+.section {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+  linear-gradient(to top, black 0%, transparent 3%),
+              linear-gradient(to bottom, black 0%, transparent 3%),
+              linear-gradient(to left, black 0%, transparent 2%),
+              linear-gradient(to right, black 0%, transparent 2%);
+  background-repeat: no-repeat;
+  /* background-size: 100% 50px, 100% 50px, 50px 100%, 50px 100%; */
+  pointer-events: none;
+}
+
+.home-container {
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.greeting-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: white;
+  font-family: "League Spartan";
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .image-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  10% {
+    transform: rotate(14deg);
   }
-  
-  .featured-title {
-    font-size: 36px;
-    color: #61dafb;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "League Spartan";
+  20% {
+    transform: rotate(-8deg);
   }
-  
-  .featured-projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  30% {
+    transform: rotate(14deg);
   }
-  
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.text-container {
+  background-color: #000000; /* Black background for terminal */
+  border: 2px solid #333; /* Grey border */
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 70%;
+}
+
+.text {
+  font-size: 36px;
+  line-height: 1.5;
+  font-family: "Courier New", Courier, monospace; /* Monospace font for terminal look */
+  color: #00FF00; /* Green text for terminal look */
+  background-color: #000000; /* Black background for terminal */
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: left;
+}
+
+.terminal-header {
+  background-color: #333; /* Dark grey header */
+  padding: 5px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-button.close {
+  background-color: #ff5f56; /* Red close button */
+}
+
+.terminal-button.minimize {
+  background-color: #ffbd2e; /* Yellow minimize button */
+}
+
+.terminal-button.expand {
+  background-color: #27c93f; /* Green expand button */
+}
+
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #00FF00;
+  }
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 60px;
+  padding: 5px;
+  margin: 0 20px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  transform: scale(1.1);
+}
+
+.insta {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+.linkedin {
+  background: #0077B5;
+}
+
+.github {
+  background: black;
+}
+
+@media (max-width: 1540px) {
   .project-card {
-    background: linear-gradient(145deg, black, #131862);
+    background: linear-gradient(135deg, #000, #0d47a1);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -44,18 +194,17 @@
     justify-content: space-between;
     align-self: center;
     justify-self: center;
-    height: 320px;
     z-index: 1;
     overflow: visible;
   }
-  
+
   .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     z-index: 10;
     cursor: pointer;
   }
-  
+
   .project-icon-container {
     display: flex;
     justify-content: center;
@@ -65,29 +214,29 @@
     border-radius: 50%;
     margin-bottom: 1.5rem;
   }
-  
+
   .project-icon {
     font-size: 3rem;
-    color: #61dafb;
+    color: #00FFFF;
   }
-  
+
   .project-content {
     text-align: center;
     flex-grow: 1;
   }
-  
+
   .project-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #ffffff;
   }
-  
+
   .project-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     color: #bbbbbb;
   }
-  
+
   .project-links {
     display: flex;
     justify-content: center;
@@ -95,248 +244,37 @@
     margin-top: auto;
     padding-top: 1rem;
   }
-  
-  .github-link {
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .heading{
+    font-size: 40px;
+  }
+  .text{
+    font-size: 20px;
+  }
+
+  .featured-projects-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .project-card {
+    width: 70%;
+    height: auto;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     color: #ffffff;
-    text-decoration: none;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
   }
-  
-  .project-repo-icon {
-    font-size: 2rem;
-    /* margin-right: 0.5rem; */
+
+  .project-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #bbbbbb;
   }
-  
- .project-repo-icon:hover {
-    /* color: grey; */
-    /* font-size: 2.5rem; */
-    transform: scale(1.2);
-  }
-  .tooltip-text {
-    visibility: hidden;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 100;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .github-link:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  .greeting-container {
-    text-align: center;
-    margin-bottom: 30px;
-    flex: 1;
-  }
-  
-  .heading {
-    font-size: 48px;
-    margin-bottom: 15px;
-    font-family: "League Spartan";
-    color: white;
-    text-align: center;
-    justify-self: center;
-    align-self: center;
-    /* color: #FFFF99; */
-  }
-  
-  .wave {
-    animation-name: wave-animation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
-  
-  @keyframes wave-animation {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    10% {
-      transform: rotate(14deg);
-    }
-  
-    20% {
-      transform: rotate(-8deg);
-    }
-  
-    30% {
-      transform: rotate(14deg);
-    }
-  
-    40% {
-      transform: rotate(-4deg);
-    }
-  
-    50% {
-      transform: rotate(10deg);
-    }
-  
-    60% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  .text {
-    font-size: 24px;
-    line-height: 1.5;
-    font-family: "League Spartan";
-    color: white;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .icon-list {
-    display: flex;
-    justify-content: center;
-    color: white;
-    padding: 20px;
-  }
-  
-  .icon {
-    font-size: 50px;
-    padding: 5px;
-    margin: 0 20px;
-    border-radius: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .icon:hover {
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
-    transform: scale(1.1);
-  }
-  
-  .insta {
-    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
-  }
-  
-  .linkedin {
-    background: #0077B5;
-  }
-  
-  .github {
-    background: black;
-  }
-  
-  @media (max-width: 1540px) {
-    .project-card {
-      background: linear-gradient(145deg, black, #131862);
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      padding: 1.5rem;
-      width: 350px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-self: center;
-      justify-self: center;
-      /* height: 320px; */
-      z-index: 1;
-      overflow: visible;
-    }
-    
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-      z-index: 10;
-      cursor: pointer;
-    }
-    
-    .project-icon-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.5rem;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-    }
-    
-    .project-icon {
-      font-size: 3rem;
-      color: #61dafb;
-    }
-    
-    .project-content {
-      text-align: center;
-      flex-grow: 1;
-    }
-    
-    .project-title {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
-    
-    .project-description {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      color: #bbbbbb;
-    }
-    
-    .project-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: auto;
-      padding-top: 1rem;
-    }
-    
-  }
-  
-  @media (max-width: 768px) {
-    .home-container {
-      flex-direction: column;
-    }
-    .heading{
-      font-size: 40px;
-    }
-    .text{
-      font-size: 20px;
-    }
-  
-    .featured-projects-container {
-      flex-direction: column;
-      gap: 2rem;
-    }
-  
-    .project-card {
-      width: 70%;
-      height: auto;
-    }
-    .project-title {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #ffffff;
-    }
-    
-    .project-description {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      color: #bbbbbb;
-    }
-    
-  }
-  
+}

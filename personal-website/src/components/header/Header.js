@@ -1,33 +1,65 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 import { FaHome, FaUser, FaProjectDiagram } from "react-icons/fa";
 import "./Header.css";
 
 function Header() {
-  const location = useLocation();
+  const [activeLink, setActiveLink] = useState("home");
+
+  const handleSetActive = (to) => {
+    console.log("HERE", to);
+    setActiveLink(to);
+  };
 
   return (
     <header className="header">
       <div className="name-role glow">
         <h2 className="title">Killian Ronan</h2>
-        <p className="subtitle">Software Development</p>
+        <p className="subtitle">Software Engineer</p>
       </div>
       <nav className="nav">
-        <Link className={`link ${location.pathname === '/' ? 'active' : ''}`} to="/">
+        <Link
+          className={`link ${activeLink === "home" ? "active" : ""}`}
+          to="home"
+          smooth={true}
+          duration={500}
+          onClick={() => handleSetActive("home")}
+        >
           <span className="nav-text">Home</span>
           <FaHome className="nav-icon" />
         </Link>
-        <Link className={`link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">
+        <Link
+          className={`link ${activeLink === "about" ? "active" : ""}`}
+          to="about"
+          smooth={true}
+          duration={500}
+          onClick={() => handleSetActive("about")}
+        >
           <span className="nav-text">About</span>
           <FaUser className="nav-icon" />
         </Link>
-        <Link className={`link ${location.pathname === '/projects' ? 'active' : ''}`} to="/projects">
+        <Link
+          className={`link ${activeLink === "projects" ? "active" : ""}`}
+          to="projects"
+          smooth={true}
+          duration={500}
+          onClick={() => handleSetActive("projects")}
+        >
           <span className="nav-text">Projects</span>
           <FaProjectDiagram className="nav-icon" />
         </Link>
       </nav>
       <div className="name-role">
-        <button className="resume-button" onClick={() => window.open("https://drive.google.com/file/d/1XGKmkF2tqkeZXGGggs1U_Z1eB9_8qTdB/view")}>Resume</button>
+        <button
+          className="resume-button"
+          onClick={() =>
+            window.open(
+              "https://drive.google.com/file/d/1XGKmkF2tqkeZXGGggs1U_Z1eB9_8qTdB/view"
+            )
+          }
+        >
+          Resume
+        </button>
       </div>
     </header>
   );
