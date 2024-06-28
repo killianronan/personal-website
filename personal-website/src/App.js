@@ -30,17 +30,33 @@ const App = () => {
 }
 
 const Section = ({ id, children }) => {
-  return (
-    <motion.section
-      id={id}
-      className="section"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      {children}
-    </motion.section>
-  );
+  if (id !== 'projects') {
+    return (
+      <motion.section
+        id={id}
+        className="section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.section>
+    );
+  }
+  else {
+    return (
+      <motion.section
+        id={id}
+        className="section"
+        style={{ background: 'linear-gradient(180deg, #000, midnightblue)' }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {children}
+      </motion.section>
+    );
+  }
 }
 
 export default App;

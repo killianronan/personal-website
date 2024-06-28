@@ -24,7 +24,7 @@ const skills = [
 
 function About() {
   return (
-    <section id="about" className="about-container section bg-dot-pattern">
+    <section className="about-container section bg-dot-pattern">
       <h2 className="title">About Me</h2>
       <strong  className="experience-text">Professional Background</strong>
       <div className="description-text">

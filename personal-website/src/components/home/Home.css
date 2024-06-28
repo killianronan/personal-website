@@ -4,6 +4,14 @@
   background-color: black;
 }
 
+.parallax-earth {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 20;
+}
+
 .section::before {
   content: '';
   position: absolute;
@@ -12,7 +20,7 @@
   right: 0;
   bottom: 0;
   background: 
-  linear-gradient(to top, black 0%, transparent 3%),
+  linear-gradient(to top, black 0%, transparent 5%),
               linear-gradient(to bottom, black 0%, transparent 3%),
               linear-gradient(to left, black 0%, transparent 2%),
               linear-gradient(to right, black 0%, transparent 2%);
@@ -183,29 +191,6 @@
 }
 
 @media (max-width: 1540px) {
-  .project-card {
-    background: linear-gradient(135deg, #000, #0d47a1);
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 1.5rem;
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;
-    justify-self: center;
-    z-index: 1;
-    overflow: visible;
-  }
-
-  .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    cursor: pointer;
-  }
-
   .project-icon-container {
     display: flex;
     justify-content: center;
@@ -262,11 +247,7 @@
     flex-direction: column;
     gap: 2rem;
   }
-
-  .project-card {
-    width: 70%;
-    height: auto;
-  }
+  
   .project-title {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;

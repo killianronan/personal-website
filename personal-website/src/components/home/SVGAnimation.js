@@ -24,6 +24,13 @@ const generateRandomStars = (numStars) => {
 };
 
 const generateRandomComets = (numComets, width, height) => {
+  const colors = [
+    { start: 'lightblue', end: 'blue' },
+    { start: 'cyan', end: 'blue' },
+    { start: 'white', end: 'yellow' },
+    { start: 'lightblue', end: 'white' },
+  ];
+
   const comets = [];
   for (let i = 0; i < numComets; i++) {
     const startX = Math.random() * 100;
@@ -34,6 +41,9 @@ const generateRandomComets = (numComets, width, height) => {
     const endY = startY + (Math.random() * 20 - 10);
     const duration = Math.random() * 5 + 3;
     const delay = Math.random() * 10;
+
+    // Randomly select a color gradient
+    const color = colors[Math.floor(Math.random() * colors.length)];
 
     comets.push(
       <Comet
@@ -48,6 +58,7 @@ const generateRandomComets = (numComets, width, height) => {
         delay={delay}
         width={width}
         height={height}
+        color={color}
       />
     );
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Comet = ({ startX, startY, controlX, controlY, endX, endY, duration, delay, width, height }) => {
+const Comet = ({ startX, startY, controlX, controlY, endX, endY, duration, delay, width, height, color }) => {
   // Convert percentage values to absolute values based on the SVG container's dimensions
   const convertToAbsolute = (value, dimension) => (parseFloat(value) / 100) * dimension;
 
@@ -10,7 +10,6 @@ const Comet = ({ startX, startY, controlX, controlY, endX, endY, duration, delay
   const adjustedControlY = (convertToAbsolute(startY, height) + convertToAbsolute(endY, height)) / 2 + (convertToAbsolute(controlY, height) - convertToAbsolute(startY, height)) * 0.1;
 
   const pathData = `M${convertToAbsolute(startX, width)},${convertToAbsolute(startY, height)} Q${adjustedControlX},${adjustedControlY} ${convertToAbsolute(endX, width)},${convertToAbsolute(endY, height)}`;
-  console.log('Comet path data:', pathData); // Debug log
 
   return (
     <motion.svg
@@ -23,8 +22,8 @@ const Comet = ({ startX, startY, controlX, controlY, endX, endY, duration, delay
     >
       <defs>
         <linearGradient id={`comet-gradient-${delay}`} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="lightblue" stopOpacity="1" />
-          <stop offset="100%" stopColor="blue" stopOpacity="0" />
+          <stop offset="0%" stopColor={color.start} stopOpacity="1" />
+          <stop offset="100%" stopColor={color.end} stopOpacity="0" />
         </linearGradient>
       </defs>
       <motion.path

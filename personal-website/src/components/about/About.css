@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 90%;
+  margin-bottom: 60px;
 }
 
 .skill-item {
