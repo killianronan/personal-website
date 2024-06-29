@@ -8,6 +8,7 @@ import Footer from "./components/footer/Footer";
 import "./App.css";
 import "@fontsource/league-spartan"; // Defaults to weight 400.
 import { TracingBeam } from './components/tracingbeam/TracingBeam';
+import Contact from './components/contact/Contact';
 
 const App = () => {
   return (
@@ -23,6 +24,9 @@ const App = () => {
       </TracingBeam>
       <Section id="projects">
         <Projects />
+      </Section>
+      <Section id="Contact">
+        <Contact />
       </Section>
       <Footer />
     </div>
@@ -48,7 +52,6 @@ const Section = ({ id, children }) => {
       <motion.section
         id={id}
         className="section"
-        style={{ background: 'linear-gradient(180deg, #000, midnightblue)' }}
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}

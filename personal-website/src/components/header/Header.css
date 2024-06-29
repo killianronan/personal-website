@@ -20,7 +20,7 @@
   border-radius: 30px;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid navy;
+  border: 1px solid #51a2e9;
 }
 
 .link {

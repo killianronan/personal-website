@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, Events, scrollSpy } from "react-scroll";
 import { FaHome, FaUser, FaProjectDiagram } from "react-icons/fa";
 import "./Header.css";
+import { SiContactlesspayment } from "react-icons/si";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
@@ -83,6 +84,18 @@ function Header() {
         >
           <FaProjectDiagram className="nav-icon" />
           <span className="nav-text">Projects</span>
+        </Link>
+        <Link
+          className={`link ${activeLink === "contact" ? "active" : ""}`}
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={500}
+          onSetActive={() => handleSetActive("contact")}
+          data-spy
+        >
+          <SiContactlesspayment className="nav-icon" />
+          <span className="nav-text">Contact</span>
         </Link>
       </nav>
     </header>
