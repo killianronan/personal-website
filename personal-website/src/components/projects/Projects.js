@@ -44,18 +44,18 @@ const Projects = () => {
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 100]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 300]), springConfig);
-  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.05], [15, 0]), springConfig);
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [-50, 100]), springConfig);
+  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [200, 0]), springConfig);
+  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.05], [0.05, 1]), springConfig);
-  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.05], [20, 0]), springConfig);
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.05], [-300, 0]), springConfig);
+  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.05], [-20, 0]), springConfig);
 
   const projectCard = (project, translate) => (
     <motion.div
       style={{ x: translate }}
       whileHover={{ y: -20 }}
-      className="group relative h-96 w-96 shrink-0"
+      className="group relative h-96 flex-1 md:flex-[0_0_30%] lg:flex-[0_0_30%] xl:flex-[0_0_30%] m-2"
       key={project.name}
     >
       <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group-hover:shadow-2xl">
@@ -70,7 +70,7 @@ const Projects = () => {
     <div
       id="projects"
       ref={ref}
-      className="relative flex flex-col overflow-hidden pb-10 pt-10 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex flex-col w-full pb-10 pt-10 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 py-20">
         <strong className="text-2xl font-bold text-white md:text-7xl" style={{ color: '#00FFFF' }}>Projects</strong>
@@ -83,11 +83,13 @@ const Projects = () => {
           opacity
         }}
       >
-        <motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
-          {completedProjects.slice(0, 3).map((project) => projectCard(project, translateX))}
-        </motion.div>
-        <motion.div className="mb-20 flex flex-row space-x-20">
-          {completedProjects.slice(3, 6).map((project) => projectCard(project, translateXReverse))}
+        <motion.div className="flex flex-wrap justify-center gap-4">
+          {completedProjects.map((project, index) => {
+            const rowIndex = Math.floor(index / 3);
+            // Apply translateX for even rows and translateXReverse for odd rows
+            const translate = rowIndex % 2 === 0 ? translateX : translateXReverse;
+            return projectCard(project, translate);
+          })}
         </motion.div>
       </motion.div>
     </div>

@@ -27,8 +27,8 @@ const App = () => {
       </Section>
       <Section id="Contact">
         <Contact />
+        <Footer />
       </Section>
-      <Footer />
     </div>
   );
 }

@@ -11,6 +11,7 @@
   background: transparent;
 }
 
+/* Bug on button hover needs to be resolved */
 .nav {
   display: flex;
   justify-content: center;
@@ -57,6 +58,7 @@
 .link.active .nav-icon {
   transform: scale(1.2);
   color: #61dafb;
+  
 }
 
 @media (max-width: 1024px) {

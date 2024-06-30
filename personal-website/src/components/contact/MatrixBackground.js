@@ -25,7 +25,8 @@ const MatrixBackground = () => {
       context.fillStyle = 'rgba(0, 0, 0, 0.05)';
       context.fillRect(0, 0, canvas.width, canvas.height);
 
-      context.fillStyle = '#0F0';
+      // context.fillStyle = '#51a2e9';
+      context.fillStyle = '#AE48FF';
       context.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < rainDrops.length; i++) {
@@ -37,6 +38,13 @@ const MatrixBackground = () => {
         }
         rainDrops[i]++;
       }
+
+      // Fade to black top
+      const gradientTop = context.createLinearGradient(0, 0, 0, canvas.height * 0.05);
+      gradientTop.addColorStop(0, 'rgba(0, 0, 0, 1)');
+      gradientTop.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      context.fillStyle = gradientTop;
+      context.fillRect(0, 0, canvas.width, canvas.height * 0.05);
     };
 
     const intervalId = setInterval(draw, 30);

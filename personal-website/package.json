@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.19",
     "bootstrap": "^5.2.3",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.2.11",
     "masonry-layout": "^4.2.2",
     "mini-svg-data-uri": "^1.4.4",

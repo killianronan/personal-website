@@ -1,28 +1,97 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import emailjs from 'emailjs-com';
 import MatrixBackground from './MatrixBackground';
+import './Contact.css';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Email sent successfully');
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        alert('Error sending email');
+      });
+  };
+
   return (
-    <div className="relative h-screen flex items-center justify-center" style={{width:'95%'}} id='contact'>
+    <div className="relative min-h-screen flex flex-col items-center justify-center contact-container" id="contact">
       <MatrixBackground />
-      <div className="relative z-10 p-8 bg-black bg-opacity-70 rounded-md text-center text-white">
-        <h1 className="text-3xl font-bold mb-4">Contact Me</h1>
-        <form className="space-y-4">
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium">Name</label>
-            <input type="text" id="name" className="w-full px-4 py-2 mt-1 bg-gray-800 text-white border border-gray-700 rounded-md" />
+      <motion.div
+        className="contact-card"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        whileHover={{ scale: 1.05 }}
+      >
+        <h1 className="contact-title">Contact Me</h1>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              className="form-input"
+              placeholder="Jack Black"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium">Email</label>
-            <input type="email" id="email" className="w-full px-4 py-2 mt-1 bg-gray-800 text-white border border-gray-700 rounded-md" />
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="form-input"
+              placeholder="email@gmail.com"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium">Message</label>
-            <textarea id="message" className="w-full px-4 py-2 mt-1 bg-gray-800 text-white border border-gray-700 rounded-md" rows="4"></textarea>
+          <div className="form-group">
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea
+              id="message"
+              className="form-textarea"
+              rows="4"
+              placeholder="Type your message here."
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
           </div>
-          <button type="submit" className="px-6 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Send</button>
+          <motion.button
+            type="submit"
+            className="form-button"
+            whileHover={{ scale: 1.05 }}
+          >
+            Submit
+          </motion.button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };
