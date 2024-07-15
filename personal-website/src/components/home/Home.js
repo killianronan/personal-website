@@ -1,6 +1,7 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-scroll";
 import "./Home.css";
 import NetworkVisualization from "./NetworkVisualization";
 
@@ -11,7 +12,8 @@ function Home() {
       <div className="relative z-10 home-container">
         <header className="greeting-container">
           <h1 className="heading featured-title">
-            Hello there <span className="wave">👋</span>
+            Hi there <span className="wave">👋</span> I'm <span style={{color:'#c073ff'}}>Killian</span>.
+            A passionate <span style={{color:'#c073ff'}}>Software Engineer</span>.
           </h1>
           <div className="text-container">
             <div className="terminal-header">
@@ -31,10 +33,24 @@ function Home() {
                   ],
                   autoStart: true,
                   loop: true,
-                  deleteSpeed: 50
+                  deleteSpeed: 50,
+                  delay: 75, 
+                  pauseFor: 2000 
                 }}
               />
             </div>
+          </div>
+          <div className="button-container">
+            <Link to="projects" spy={true} smooth={true} duration={500}>
+              <button className="cta-button">
+                View My Projects
+              </button>
+            </Link>
+            <Link to="contact" spy={true} smooth={true} duration={500}>
+              <button className="cta-button">
+                Contact Me
+              </button>
+            </Link>
           </div>
           <nav className="icon-list">
             <FaGithub
@@ -51,14 +67,6 @@ function Home() {
               title="LinkedIn"
               onClick={() => {
                 window.open("https://www.linkedin.com/in/killian-ronan-9b5150194/");
-              }}
-            />
-            <FaInstagram
-              className="icon insta"
-              aria-label="Instagram"
-              title="Instagram"
-              onClick={() => {
-                window.open("https://instagram.com/killianronan99");
               }}
             />
           </nav>

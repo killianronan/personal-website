@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -9,9 +14,13 @@
   z-index: 1000;
   box-sizing: border-box;
   background: transparent;
+  transition: background-color 0.3s ease;
 }
 
-/* Bug on button hover needs to be resolved */
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+}
+
 .nav {
   display: flex;
   justify-content: center;
@@ -21,9 +30,19 @@
   border-radius: 30px;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid #51a2e9;
+  border: 2px solid #333;
+  position: relative;
 }
 
+.indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #AE48FF;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Link Styles */
 .link {
   color: #bbb;
   text-decoration: none;
@@ -31,11 +50,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   margin: 0 15px;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-bottom: 1px solid transparent;
 }
 
 .link .nav-icon {
@@ -48,17 +67,19 @@
   font-weight: bold;
 }
 
-.link:hover,
+.link:hover {
+  color: #fff;
+}
+
 .link.active {
   color: #fff;
-  background-color: rgba(0, 0, 0, 1);
+  /* border-bottom: 1px solid #AE48FF; */
 }
 
 .link:hover .nav-icon,
 .link.active .nav-icon {
   transform: scale(1.2);
-  color: #61dafb;
-  
+  color: #AE48FF;
 }
 
 @media (max-width: 1024px) {
@@ -116,4 +137,9 @@
     font-size: 10px;
     padding: 4px;
   }
+}
+
+.link:focus {
+  outline: 2px dashed #61dafb;
+  outline-offset: 4px;
 }

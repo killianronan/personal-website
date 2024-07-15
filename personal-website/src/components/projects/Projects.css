@@ -4,20 +4,49 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(0.7);
   z-index: 0;
   border-radius: 20px;
-  border: 2px solid #4a5568; 
+  /* border: 2px solid #4a5568; */
+  overflow: hidden; /* Ensure the image does not overflow the container */
+  /* background: linear-gradient(135deg, #2e2e2e, #3e3e3e);  */
+    /* background: linear-gradient(135deg, #AE48FF, black);  */
+    /* background: linear-gradient(135deg, black, #AE48FF);  */
+    /* background: linear-gradient(145deg, #1f1f1f, #3b3b3b); */
+    /* background: linear-gradient(145deg, #0f2027, #203a43); */
+    /* background: linear-gradient(145deg, #2c3e50, #4ca1af); */
+    /* background: linear-gradient(145deg, #2a2a2a, #1e1e1e); */
+    /* background: linear-gradient(145deg, #004d61, #00796b); */
+     /* Dark Purple to Black Gradient */
+  /* background: linear-gradient(145deg, #AE48FF, #000000); */
+
+  /* Purple to Deep Blue Gradient */
+  /* background: linear-gradient(145deg, #AE48FF, #1e3a8a); */
+
+  /* Dark Violet to Black Gradient */
+  /* background: linear-gradient(145deg, #6A0DAD, #000000); */
+  background: linear-gradient(145deg, #6A0DAD 0%, #4B0082 15%, #191970 50%, #000000 85%);
+
+
+  /* Dark Magenta to Black Gradient */
+  /* background: linear-gradient(145deg, #8B008B, #000000); */
+
+  /* Purple to Midnight Blue Gradient */
+  /* background: linear-gradient(145deg, #AE48FF, #191970); */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the image covers the entire container */
+  object-position: center; /* Ensure the top left of the image aligns with the top left of the container */
 }
 
 .group {
-  margin-bottom: 20px; /* Adjust spacing between the rows */
+  margin-bottom: 20px;
 }
 
 .group.relative {
-  margin-right: 10px; /* Adjust spacing between the items */
+  margin-right: 10px;
 }
 
 h2 {

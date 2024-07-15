@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, Events, scrollSpy } from "react-scroll";
 import { FaHome, FaUser, FaProjectDiagram } from "react-icons/fa";
-import "./Header.css";
 import { MdContactMail } from "react-icons/md";
+import "./Header.css";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
+  const [indicatorStyle, setIndicatorStyle] = useState({});
+  const navRef = useRef(null);
 
   useEffect(() => {
     Events.scrollEvent.register("begin", function () {
@@ -42,13 +44,26 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    const activeNavItem = document.querySelector(`.link.active`);
+    if (activeNavItem && navRef.current) {
+      const navRect = navRef.current.getBoundingClientRect();
+      const activeRect = activeNavItem.getBoundingClientRect();
+      setIndicatorStyle({
+        left: `${activeRect.left - navRect.left}px`,
+        width: `${activeRect.width}px`,
+      });
+    }
+  }, [activeLink]);
+
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
 
   return (
     <header className="header">
-      <nav className="nav">
+      <nav className="nav" ref={navRef}>
+        <div className="indicator" style={indicatorStyle}></div>
         <Link
           className={`link ${activeLink === "home" ? "active" : ""}`}
           to="home"

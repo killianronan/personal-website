@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
 import MatrixBackground from './MatrixBackground';
@@ -10,6 +10,15 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isEmailSent, setIsEmailSent] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    const emailSentStatus = localStorage.getItem('isEmailSent');
+    if (emailSentStatus) {
+      setIsEmailSent(true);
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -17,10 +26,22 @@ const Contact = () => {
       ...prevFormData,
       [id]: value
     }));
+    setErrorMessage(''); // Reset error message on input change
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (isEmailSent) {
+      setErrorMessage('You have already sent an email. Please try again later.');
+      return;
+    }
+
+    const { name, email, message } = formData;
+    if (!name || !email || !message) {
+      setErrorMessage('All fields are required.');
+      return;
+    }
 
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -31,6 +52,9 @@ const Contact = () => {
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Email sent successfully');
+        localStorage.setItem('isEmailSent', 'true');
+        setIsEmailSent(true);
+        setFormData({ name: '', email: '', message: '' }); 
       })
       .catch((error) => {
         console.log('FAILED...', error);
@@ -83,6 +107,7 @@ const Contact = () => {
               onChange={handleChange}
             ></textarea>
           </div>
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
           <motion.button
             type="submit"
             className="form-button"
