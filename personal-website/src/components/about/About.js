@@ -48,7 +48,7 @@ const SkillSection = ({ title, skills }) => (
 function About() {
   return (
     <section className="about-container section bg-dot-pattern">
-      <div className="flex flex-row justify-between items-center mb-5" style={{ width: '100%' }}>
+      <div className="about-title-container">
         <h2 className="about-title">About Me</h2>
         <motion.button
           type="submit"

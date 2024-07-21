@@ -5,6 +5,13 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
+.about-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .about-title {
   font-size: 60px;
   font-weight: bold;
@@ -19,12 +26,15 @@
   font-weight: bold;
   color: #00FFFF;
   align-self: flex-start;
-  text-align: center;
+  text-align: left;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .form-button {
   max-height: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: transform 0.3s ease;
 }
 
 .experience-text {
@@ -65,12 +75,13 @@
 
 .skill-item {
   padding: 20px;
-  background: linear-gradient(135deg, #1e1e1e, #2e2e2e); /* Darker gradient */
+  background: linear-gradient(135deg, #1e1e1e, #2e2e2e); 
   margin: 10px;
   border-radius: 15px; 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border: 1px solid #444;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   text-align: center;
@@ -82,19 +93,15 @@
 @keyframes rotateAnimation {
   0% {
     transform: rotate(0deg);
-    /* scale: 1.1; */
   }
   25% {
     transform: rotate(5deg);
-    /* scale: 1.1; */
   }
   75% {
     transform: rotate(-5deg);
-    /* scale: 1.1; */
   }
   100% {
     transform: rotate(0deg);
-    /* scale: 1.1; */
   }
 }
 
@@ -108,7 +115,7 @@
 .skill-icon {
   width: 50px;
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 
 .skill-item strong {
@@ -116,10 +123,132 @@
   color: #fff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   font-weight: 500;
+  margin-top: 10px;
 }
 
 .flex-row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .about-title, .title {
+    font-size: 48px;
+  }
+
+  .experience-text, .description-text {
+    font-size: 18px;
+  }
+
+  .skill-category-title {
+    font-size: 26px;
+  }
+
+  .skill-item {
+    width: 90px;
+    height: 90px;
+  }
+
+  .skill-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .skill-item strong {
+    font-size: 13px;
+  }
+
+  .form-button {
+    font-size: 16px !important;
+    padding: 8px 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title, .title {
+    font-size: 36px;
+  }
+
+  .experience-text, .description-text {
+    font-size: 16px;
+  }
+
+  .skill-category-title {
+    font-size: 24px;
+  }
+
+  .skill-item {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skill-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-item strong {
+    font-size: 12px;
+  }
+
+  .form-button {
+    font-size: 14px !important;
+    padding: 6px 12px !important;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-title-container {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 20px;
+  }
+
+  .about-title, .title {
+    font-size: 28px;
+  }
+
+  .experience-text, .description-text {
+    font-size: 14px;
+  }
+
+  .skill-category-title {
+    font-size: 20px;
+  }
+
+  .skill-item {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .skill-item strong {
+    font-size: 10px;
+  }
+
+  .form-button {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-title-container {
+    align-items: center;
+  }
 }
