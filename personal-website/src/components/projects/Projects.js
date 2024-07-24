@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import './Projects.css';
 
@@ -44,8 +44,33 @@ const Projects = () => {
 
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [-50, 100]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [200, 0]), springConfig);
+  const [translateValues, setTranslateValues] = useState({ translateX: [-20, 80], translateXReverse: [400, 100] });
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 600) {
+        setTranslateValues({ translateX: [0, 40], translateXReverse: [200, 50] });
+      } else if (screenWidth <= 750) {
+        setTranslateValues({ translateX: [0, 80], translateXReverse: [300, 75] });
+      } else if (screenWidth <= 1000) {
+        setTranslateValues({ translateX: [0, 140], translateXReverse: [350, 90] });
+      } else {
+        setTranslateValues({ translateX: [0, 200], translateXReverse: [400, 100] });
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 1], translateValues.translateX), springConfig);
+  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], translateValues.translateXReverse), springConfig);
   const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.05], [0.05, 1]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
@@ -55,7 +80,7 @@ const Projects = () => {
     <motion.div
       style={{ x: translate }}
       whileHover={{ y: -20 }}
-      className="group relative h-96 flex-1 md:flex-[0_0_30%] lg:flex-[0_0_30%] xl:flex-[0_0_30%] m-2"
+      className="group relative project-card"
       key={project.name}
     >
       <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group-hover:shadow-2xl">
@@ -67,16 +92,14 @@ const Projects = () => {
       <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100">{project.name}</h2>
     </motion.div>
   );
-  
-  
 
   return (
     <div
       id="projects"
       ref={ref}
-      className="relative flex flex-col w-full pb-10 pt-10 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex flex-col w-full pt-10 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 py-20">
+      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 pb-20 pt-20">
         <strong className="text-2xl font-bold text-white md:text-7xl" style={{ color: '#00FFFF' }}>Projects</strong>
       </div>
       <motion.div
@@ -87,14 +110,15 @@ const Projects = () => {
           opacity
         }}
       >
-        <motion.div className="flex flex-wrap justify-center gap-4">
-          {completedProjects.map((project, index) => {
-            const rowIndex = Math.floor(index / 3);
-            // Apply translateX for even rows and translateXReverse for odd rows
-            const translate = rowIndex % 2 === 0 ? translateX : translateXReverse;
-            return projectCard(project, translate);
-          })}
-        </motion.div>
+        <div className="scroll-container">
+          <motion.div className="scroll-content">
+            {completedProjects.map((project, index) => {
+              const rowIndex = Math.floor(index / 3);
+              const translate = rowIndex % 2 === 0 ? translateX : translateXReverse;
+              return projectCard(project, translate);
+            })}
+          </motion.div>
+        </div>
       </motion.div>
     </div>
   );
