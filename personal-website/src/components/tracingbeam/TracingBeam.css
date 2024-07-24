@@ -1,16 +1,31 @@
 .tracing-beam {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .size-2 {
-    width: 2rem;
-    height: 2rem;
-  }
-  
-  .size-4 {
-    width: 4rem;
-    height: 4rem;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.size-2 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-4 {
+  width: 4rem;
+  height: 4rem;
+}
+
+.tracing-beam-left,
+.tracing-beam-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10; /* Adjust z-index if necessary */
+}
+
+.tracing-beam-left {
+  left: 0;
+}
+
+.tracing-beam-right {
+  right: 0;
+}

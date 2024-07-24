@@ -1,5 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-coverflow';
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
+
 import './Projects.css';
 
 const completedProjects = [
@@ -36,90 +43,74 @@ const completedProjects = [
 ];
 
 const Projects = () => {
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start']
-  });
+  const [autoplay, setAutoplay] = useState(true);
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const handleMouseEnter = () => {
+    setAutoplay(false);
+  };
 
-  const [translateValues, setTranslateValues] = useState({ translateX: [-20, 80], translateXReverse: [400, 100] });
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-
-      if (screenWidth <= 600) {
-        setTranslateValues({ translateX: [0, 40], translateXReverse: [200, 50] });
-      } else if (screenWidth <= 750) {
-        setTranslateValues({ translateX: [0, 80], translateXReverse: [300, 75] });
-      } else if (screenWidth <= 1000) {
-        setTranslateValues({ translateX: [0, 140], translateXReverse: [350, 90] });
-      } else {
-        setTranslateValues({ translateX: [0, 200], translateXReverse: [400, 100] });
-      }
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 1], translateValues.translateX), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], translateValues.translateXReverse), springConfig);
-  const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
-  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.05], [0.05, 1]), springConfig);
-  const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.05], [5, 0]), springConfig);
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.05], [-20, 0]), springConfig);
-
-  const projectCard = (project, translate) => (
-    <motion.div
-      style={{ x: translate }}
-      whileHover={{ y: -20 }}
-      className="group relative project-card"
-      key={project.name}
-    >
-      <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group-hover:shadow-2xl">
-        <div className="project-bg border-2 border-gray-500">
-          <img src={project.image} alt={project.name} className="project-image" />
-        </div>
-      </a>
-      <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover:opacity-80"></div>
-      <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100">{project.name}</h2>
-    </motion.div>
-  );
+  const handleMouseLeave = () => {
+    setAutoplay(true);
+  };
 
   return (
-    <div
-      id="projects"
-      ref={ref}
-      className="relative flex flex-col w-full pt-10 antialiased [perspective:1000px] [transform-style:preserve-3d]"
-    >
-      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 pb-20 pt-20">
+    <div className="projects-container">
+      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 pb-20">
         <strong className="text-2xl font-bold text-white md:text-7xl" style={{ color: '#00FFFF' }}>Projects</strong>
       </div>
-      <motion.div
-        style={{
-          rotateX,
-          rotateZ,
-          translateY,
-          opacity
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation={{
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        }}
+        pagination={{ clickable: true }}
+        autoplay={autoplay ? { delay: 5000 } : false}
+        effect="coverflow"
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
         }}
       >
-        <div className="scroll-container">
-          <motion.div className="scroll-content">
-            {completedProjects.map((project, index) => {
-              const rowIndex = Math.floor(index / 3);
-              const translate = rowIndex % 2 === 0 ? translateX : translateXReverse;
-              return projectCard(project, translate);
-            })}
-          </motion.div>
-        </div>
-      </motion.div>
+        {completedProjects.map((project, index) => (
+          <SwiperSlide key={index}>
+            <div className="project-card block group-hover:shadow-2xl max-w border-2 border-white-500" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              {/* <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group-hover:shadow-2xl max-w"> */}
+                <div className="project-bg">
+                  <img src={project.image} alt={project.name} className="project-image" />
+                </div>
+              {/* </a> */}
+              <div className="project-info">
+                <h2 className="project-name">{project.name}</h2>
+                <p className="project-description">{project.description}</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
     </div>
   );
 };
