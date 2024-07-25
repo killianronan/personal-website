@@ -46,6 +46,10 @@ const SkillSection = ({ title, skills }) => (
 );
 
 function About() {
+  const handleDownloadClick = () => {
+    window.open('https://docs.google.com/document/d/e/2PACX-1vRtuKrW6Yf-wJ28YI0UXpuAZTRfAe4PX2ONw98HeLj2ZiYVV17hbG7GWY7MiHkK_YjlPc5M9EpZqGzR/pub', '_blank');
+  };
+
   return (
     <section className="about-container section bg-dot-pattern">
       <div className="about-title-container">
@@ -54,6 +58,7 @@ function About() {
           type="submit"
           className="form-button"
           whileHover={{ scale: 1.05 }}
+          onClick={handleDownloadClick}
         >
         <span className="button-text">Download CV</span>
         <span className="button-icon">CV <FaFileDownload className="button-icon"/></span>
