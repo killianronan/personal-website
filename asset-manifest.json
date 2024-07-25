@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.a70a30ab.css",
-    "main.js": "/personal-website/static/js/main.f7c2c1f4.js",
+    "main.css": "/personal-website/static/css/main.2bed8e93.css",
+    "main.js": "/personal-website/static/js/main.8b6aca25.js",
     "static/js/453.253ccfac.chunk.js": "/personal-website/static/js/453.253ccfac.chunk.js",
     "static/media/league-spartan-all-400-normal.woff": "/personal-website/static/media/league-spartan-all-400-normal.63d127d27993ec6f782d.woff",
     "static/media/league-spartan-latin-400-normal.woff2": "/personal-website/static/media/league-spartan-latin-400-normal.ff90845b5ef1a629271a.woff2",
     "static/media/league-spartan-latin-ext-400-normal.woff2": "/personal-website/static/media/league-spartan-latin-ext-400-normal.8915f44a464c0038a068.woff2",
     "static/media/league-spartan-vietnamese-400-normal.woff2": "/personal-website/static/media/league-spartan-vietnamese-400-normal.e8ad14433ca56ca2d3c0.woff2",
     "index.html": "/personal-website/index.html",
-    "main.a70a30ab.css.map": "/personal-website/static/css/main.a70a30ab.css.map",
-    "main.f7c2c1f4.js.map": "/personal-website/static/js/main.f7c2c1f4.js.map",
+    "main.2bed8e93.css.map": "/personal-website/static/css/main.2bed8e93.css.map",
+    "main.8b6aca25.js.map": "/personal-website/static/js/main.8b6aca25.js.map",
     "453.253ccfac.chunk.js.map": "/personal-website/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a70a30ab.css",
-    "static/js/main.f7c2c1f4.js"
+    "static/css/main.2bed8e93.css",
+    "static/js/main.8b6aca25.js"
   ]
 }
