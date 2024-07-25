@@ -5,10 +5,10 @@ import About from "./components/about/About";
 import Home from "./components/home/Home";
 import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
-import "./App.css";
-import "@fontsource/league-spartan"; // Defaults to weight 400.
-import { TracingBeam } from './components/tracingbeam/TracingBeam';
 import Contact from './components/contact/Contact';
+import { TracingBeam } from './components/tracingbeam/TracingBeam';
+import "@fontsource/league-spartan";
+import "./App.css";
 
 const App = () => {
   return (

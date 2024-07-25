@@ -38,21 +38,21 @@ const completedProjects = [
     url: 'https://github.com/killianronan/Premier-League-ML-Analysis',
     description: 'Built a premier league match outcome prediction system using various machine learning models in python.',
     technologies: ['Python', 'Machine Learning', 'Scikit-Learn'],
-    image: '/football2.png'
+    image: '/football.png'
   },
   {
     name: 'Asclepsius Tools Chat Bot',
     url: 'https://github.com/steviejeebies/AscToolsChat',
     description: 'Developed a chatbot for doctors to advise patients on lifestyle changes which could improve their health.',
     technologies: ['React', 'Bot Framework', 'Natural Language Processing'],
-    image: '/chatbot2-removebg.png'
+    image: '/chatbot.png'
   },
   {
     name: 'Personal Portfolio Website',
     url: 'https://github.com/killianronan/personal-website',
     description: 'Built a personal porfolio website to showcase my web development skills using React with HTML, CSS & JS.',
     technologies: ['React', 'HTML', 'CSS', 'JavaScript'],
-    image: '/portfolio3.png'
+    image: '/portfolio.png'
   },
   {
     name: 'Elderly Information Portal',
@@ -66,7 +66,7 @@ const completedProjects = [
     url: 'https://github.com/killianronan/extraterrestrial-celestial-tracker',
     description: 'Built a web application designed to predict and notify users about upcoming celestial events.',
     technologies: ['React', 'Express', 'Firebase'],
-    image: '/ect2.png'
+    image: '/ect.png'
   }
 ];
 
