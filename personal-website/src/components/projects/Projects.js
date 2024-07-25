@@ -83,7 +83,7 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 pb-20">
+      <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4">
         <h2 className="title">Projects</h2>
       </div>
       <Swiper
@@ -105,6 +105,7 @@ const Projects = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        touchEventsTarget="container" // Enable touch events on container
         breakpoints={{
           640: {
             slidesPerView: 1,

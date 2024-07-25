@@ -110,7 +110,7 @@ const Contact = () => {
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <motion.button
             type="submit"
-            className="form-button"
+            className="contact-form-button"
             whileHover={{ scale: 1.05 }}
           >
             Submit

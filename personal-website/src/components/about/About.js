@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import { FaHtml5, FaCss3Alt, FaSass, FaReact, FaAngular, FaPython, FaJava, FaDatabase, FaJenkins, FaAws } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaSass, FaReact, FaAngular, FaPython, FaJava, FaDatabase, FaJenkins, FaAws, FaFileDownload } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiApachespark, SiCsharp } from "react-icons/si";
 import { FaGitSquare } from "react-icons/fa";
@@ -55,7 +55,8 @@ function About() {
           className="form-button"
           whileHover={{ scale: 1.05 }}
         >
-          Download CV
+        <span className="button-text">Download CV</span>
+        <span className="button-icon">CV <FaFileDownload className="button-icon"/></span>
         </motion.button>
       </div>
       <strong className="experience-text">Professional Background</strong>
