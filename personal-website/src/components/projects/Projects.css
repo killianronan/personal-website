@@ -32,16 +32,17 @@
   background: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 400px;
-  margin: 30px;
+  height: 500px;
+  margin: 35px;
   cursor: pointer;
-  background: linear-gradient(145deg, black 10%,  #49047a 50%, #000000 90%);
+  background: linear-gradient(145deg, black 10%, #49047a 50%, #000000 90%);
 }
 
 .project-card:hover {
   transform: scale(1.04);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .project-bg {
@@ -77,9 +78,36 @@
   margin-bottom: 10px;
 }
 
+.project-technologies {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.technology-badge {
+  background: #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.technology-badge svg {
+  margin-right: 5px;
+}
+
+.technology-badge:hover {
+  opacity: 0.9;
+}
+
 .swiper-pagination {
   margin-top: 20px;
-  bottom: 0px !important; 
+  bottom: 0px !important;
 }
 
 /* Custom Navigation Buttons */
@@ -115,4 +143,42 @@
 
 .swiper-pagination-bullet-active {
   background: #FF00FF;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .technology-badge {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-name {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .technology-badge {
+    font-size: 0.72rem;
+    padding: 3px 6px;
+  }
 }
