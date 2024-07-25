@@ -60,24 +60,24 @@ function About() {
       </div>
       <strong className="experience-text">Professional Background</strong>
       <div className="description-text">
-        I developed my knowledge on the fundamentals of software design & maintenance throughout my studies of Computer Science at Trinity College Dublin. I gained experience working as a <strong>full-stack web application developer</strong> at a promising startup, which allowed me to hone my proficiency in all facets of the software design lifecycle. I'm currently working as a <strong>P3 Software Engineer at Workday</strong>!
+        I developed my knowledge on the fundamentals of software design & maintenance throughout my studies of <strong>Computer Science at Trinity College Dublin</strong>. I gained experience working as a <strong>full-stack web application developer</strong> at a promising startup, which allowed me to hone my proficiency in all facets of the software design lifecycle. I'm currently working as a <strong>P3 Software Engineer at Workday</strong>!
       </div>
       <strong className="experience-text">Personal Interests</strong>
       <div className="description-text">
-        When I’m not at my computer I like to spend my time reading, playing football, hanging out with friends and gaming. Take a look at some of my personal work in the Projects section. Check out my resume for more details on my background in software development.
+        When I’m not at my computer I like to spend my time <strong>reading</strong>, <strong>playing football</strong>, <strong>hanging out with friends</strong>, and <strong>gaming</strong>. Take a look at some of my personal work in the <strong>Projects</strong> section. Check out my <strong>resume</strong> for more details on my background in software development.
       </div>
       <h2 className="title">Experience</h2>
       <strong className="experience-text">Software Developer at IRLCA, Dublin (2018 - 2022)</strong>
       <div className="description-text">
-        At IRLCA, I honed my skills in full-stack development, utilizing Angular (HTML, CSS, TS) for the front end, C# with ASP.NET for the backend, and MSSQL for database management. This role introduced me to industry-standard practices with developing robust web applications and managing complex software projects.
+        At IRLCA, I honed my skills in full-stack development, utilizing <strong>Angular (HTML, CSS, TS)</strong> for the front end, <strong>C# with ASP.NET</strong> for the backend, and <strong>MSSQL</strong> for database management. This role introduced me to <strong>industry-standard practices</strong> with developing robust web applications and managing complex software projects.
       </div>
       <strong className="experience-text">P2 Software Engineer at Workday, Dublin (2022 - 2023)</strong>
       <div className="description-text">
-        After graduating, I joined Workday as a P2 Software Engineer, where I leveraged my skills in big data analytics using Python and PySpark (Apache Spark) with cloud technologies (AWS Glue, Lambda & Redshift). Over two years, I enhanced my expertise in handling large datasets and advanced my AWS skills.
+        After graduating, I joined Workday as a <strong>P2 Software Engineer</strong>, where I leveraged my skills in <strong>big data analytics</strong> using <strong>Python and PySpark (Apache Spark)</strong> with <strong>cloud technologies (AWS Glue, Lambda & Redshift)</strong>. Over two years, I enhanced my expertise in handling large datasets and advanced my AWS skills.
       </div>
       <strong className="experience-text">P3 Software Engineer at Workday, Vancouver (2023 - 2024)</strong>
       <div className="description-text">
-        My contributions led to a promotion to P3 Software Engineer, reflecting my ability to deliver impactful solutions and drive continuous improvement.
+        My contributions led to a <strong>promotion to P3 Software Engineer</strong>, reflecting my ability to deliver impactful solutions and drive continuous improvement.
       </div>
       <h2 className="title">Skills & Proficiencies</h2>
       <div className="flex flex-row" style={{ width: '100%' }}>

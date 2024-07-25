@@ -38,7 +38,6 @@
   margin: 30px;
   cursor: pointer;
   background: linear-gradient(145deg, black 10%,  #49047a 50%, #000000 90%);
-  /* #6A0DAD */
 }
 
 .project-card:hover {
@@ -75,6 +74,7 @@
 .project-description {
   font-size: 1rem;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .swiper-pagination {

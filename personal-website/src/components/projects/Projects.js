@@ -13,19 +13,19 @@ const completedProjects = [
   {
     name: 'Football Match Predictor',
     url: 'https://github.com/killianronan/Premier-League-ML-Analysis',
-    description: 'Created a premier league match outcome prediction system using various machine learning models in python.',
+    description: 'Built a premier league match outcome prediction system using various machine learning models in python.',
     image: '/football2.png'
   },
   {
     name: 'Asclepsius Tools Chat Bot',
     url: 'https://github.com/steviejeebies/AscToolsChat',
-    description: 'Helped develop a Microsoft QnA chatbot for doctors to advise patients on lifestyle changes which could improve their health.',
+    description: 'Developed a chatbot for doctors to advise patients on lifestyle changes which could improve their health.',
     image: '/chatbot2-removebg.png'
   },
   {
     name: 'Personal Portfolio Website',
     url: 'https://github.com/killianronan/personal-website',
-    description: 'Built this website using React with HTML, CSS & JS.',
+    description: 'Built a personal porfolio website to showcase my web development skills using React with HTML, CSS & JS.',
     image: '/portfolio3.png'
   },
   {
@@ -56,12 +56,13 @@ const Projects = () => {
   return (
     <div className="projects-container">
       <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4 pb-20">
-        <strong className="text-2xl font-bold text-white md:text-7xl" style={{ color: '#00FFFF' }}>Projects</strong>
+        <h2 className="title">Projects</h2>
       </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={50}
         slidesPerView={1}
+        centeredSlides={true}  // Center the active slide
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -96,11 +97,9 @@ const Projects = () => {
         {completedProjects.map((project, index) => (
           <SwiperSlide key={index}>
             <div className="project-card block group-hover:shadow-2xl max-w border-2 border-white-500" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              {/* <a href={project.url} target="_blank" rel="noopener noreferrer" className="block group-hover:shadow-2xl max-w"> */}
-                <div className="project-bg">
-                  <img src={project.image} alt={project.name} className="project-image" />
-                </div>
-              {/* </a> */}
+              <div className="project-bg">
+                <img src={project.image} alt={project.name} className="project-image" />
+              </div>
               <div className="project-info">
                 <h2 className="project-name">{project.name}</h2>
                 <p className="project-description">{project.description}</p>

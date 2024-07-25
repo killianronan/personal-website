@@ -17,15 +17,15 @@ const App = () => {
       <Section id="home">
         <Home />
       </Section>
-      <TracingBeam className="px-6">
-        <Section id="about">
+      <Section id="about">
+        <TracingBeam className="px-10">
           <About />
-        </Section>
-      </TracingBeam>
+        </TracingBeam>
+      </Section>
       <Section id="projects">
         <Projects />
       </Section>
-      <Section id="Contact">
+      <Section id="contact">
         <Contact />
         <Footer />
       </Section>
@@ -34,32 +34,17 @@ const App = () => {
 }
 
 const Section = ({ id, children }) => {
-  if (id !== 'projects') {
-    return (
-      <motion.section
-        id={id}
-        className="section"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {children}
-      </motion.section>
-    );
-  }
-  else {
-    return (
-      <motion.section
-        id={id}
-        className="section"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {children}
-      </motion.section>
-    );
-  }
+  return (
+    <motion.section
+      id={id}
+      className="section"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {children}
+    </motion.section>
+  );
 }
 
 export default App;

@@ -13,7 +13,15 @@ const NetworkVisualization = () => {
     const topColor = [24, 203, 252];
 
     let mousePosition = { x: canvas.width / 2, y: canvas.height / 2 };
-    let dots = { nb: 300, distance: 100, d_radius: 150, array: [] };
+    let dots;
+
+    if (window.innerWidth >= 1200) {
+      dots = { nb: 300, distance: 100, d_radius: 150, array: [] };
+    } else if (window.innerWidth >= 768) {
+      dots = { nb: 200, distance: 80, d_radius: 120, array: [] };
+    } else {
+      dots = { nb: 100, distance: 60, d_radius: 90, array: [] };
+    }
 
     function Dot() {
       this.x = Math.random() * canvas.width;
