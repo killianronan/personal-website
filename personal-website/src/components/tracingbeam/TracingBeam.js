@@ -34,7 +34,6 @@ export const TracingBeam = ({ children, className }) => {
   // Calculate the y1 factor based on screen width
   const screenWidth = window.innerWidth;
   const y1Factor = screenWidth > 1200 ? 3 : screenWidth > 800 ? 4 : 5;
-  console.log(y1Factor)
   const y1 = useSpring(useTransform(scrollYProgress, [0, scrollRange[1] / y1Factor], [20, svgHeight - 20]), {
     stiffness: 500,
     damping: 90

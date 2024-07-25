@@ -50,14 +50,14 @@ const Contact = () => {
       process.env.REACT_APP_EMAILJS_PUBLIC_KEY
     )
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+        // console.log('SUCCESS!', response.status, response.text);
         alert('Email sent successfully');
         localStorage.setItem('isEmailSent', 'true');
         setIsEmailSent(true);
         setFormData({ name: '', email: '', message: '' }); 
       })
       .catch((error) => {
-        console.log('FAILED...', error);
+        // console.log('FAILED...', error);
         alert('Error sending email');
       });
   };

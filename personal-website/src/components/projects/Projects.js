@@ -105,8 +105,6 @@ const Projects = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
         breakpoints={{
           640: {
             slidesPerView: 1,
