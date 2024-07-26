@@ -60,4 +60,3 @@ Feel free to reach out if you have any questions or suggestions!
 - **LinkedIn:** [Killian Ronan](https://www.linkedin.com/in/killian-ronan-9b5150194/)
 
 Thank you for visiting my personal portfolio website!
-```
