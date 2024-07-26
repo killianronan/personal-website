@@ -83,7 +83,7 @@ const Projects = () => {
   return (
     <div className="projects-container">
       <div className="relative left-0 top-0 mx-auto w-full max-w-5xl px-4">
-        <h2 className="title">Projects</h2>
+        <h2 className="title" style={{marginTop: '50px'}}>Projects</h2>
       </div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
