@@ -39,7 +39,6 @@ const MatrixBackground = () => {
         rainDrops[i]++;
       }
 
-      // Fade to black top
       const gradientTop = context.createLinearGradient(0, 0, 0, canvas.height * 0.05);
       gradientTop.addColorStop(0, 'rgba(0, 0, 0, 1)');
       gradientTop.addColorStop(1, 'rgba(0, 0, 0, 0)');

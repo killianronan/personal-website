@@ -89,7 +89,7 @@ const Projects = () => {
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         spaceBetween={50}
         slidesPerView={1}
-        centeredSlides={true}  // Center the active slide
+        centeredSlides={true} 
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -104,7 +104,7 @@ const Projects = () => {
           modifier: 1,
           slideShadows: true,
         }}
-        touchEventsTarget="container" // Enable touch events on container
+        touchEventsTarget="container" 
         breakpoints={{
           640: {
             slidesPerView: 1,
