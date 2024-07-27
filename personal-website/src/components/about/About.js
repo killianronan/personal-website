@@ -53,6 +53,7 @@ function About() {
   return (
     <section className="about-container section bg-dot-pattern">
       <div className="about-title-container">
+        <img src={`${process.env.PUBLIC_URL}/avatar.jpg`} alt="Killian Ronan" className="avatar"/>
         <h2 className="about-title">About Me</h2>
         <motion.button
           type="submit"
