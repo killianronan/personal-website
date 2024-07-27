@@ -47,7 +47,7 @@ const SkillSection = ({ title, skills }) => (
 
 function About() {
   const handleDownloadClick = () => {
-    window.open('https://docs.google.com/document/d/e/2PACX-1vRtuKrW6Yf-wJ28YI0UXpuAZTRfAe4PX2ONw98HeLj2ZiYVV17hbG7GWY7MiHkK_YjlPc5M9EpZqGzR/pub', '_blank');
+    window.open('https://drive.google.com/file/d/1FWi0MAZiREORBc-HSjbJMoTw8fhHVbn9/view?usp=sharing', '_blank');
   };
 
   return (
