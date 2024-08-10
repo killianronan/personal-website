@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from "./components/header/Header";
 import About from "./components/about/About";
@@ -7,10 +8,22 @@ import Projects from "./components/projects/Projects";
 import Footer from "./components/footer/Footer";
 import Contact from './components/contact/Contact';
 import { TracingBeam } from './components/tracingbeam/TracingBeam';
+import Blog from './components/blog/Blog';  
 import "@fontsource/league-spartan";
 import "./App.css";
 
 const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+    </Router>
+  );
+}
+
+const Portfolio = () => {
   return (
     <div className="app-container">
       <Header />

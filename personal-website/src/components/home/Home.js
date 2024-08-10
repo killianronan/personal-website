@@ -46,11 +46,9 @@ function Home() {
                 View My Projects
               </button>
             </Link>
-            <Link to="contact" spy={true} smooth={true} duration={500}>
-              <button className="cta-button">
-                Contact Me
-              </button>
-            </Link>
+            <button className="cta-button" onClick={() => window.location.href = '/blog'}>
+              See My Blog
+            </button>
           </div>
           <nav className="icon-list">
             <FaGithub
