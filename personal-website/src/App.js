@@ -11,6 +11,7 @@ import { TracingBeam } from './components/tracingbeam/TracingBeam';
 import Blog from './components/blog/Blog';  
 import "@fontsource/league-spartan";
 import "./App.css";
+import BlogPost from './components/blog/blogpost/BlogPost';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </Router>
   );

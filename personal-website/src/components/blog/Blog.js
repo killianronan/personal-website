@@ -1,10 +1,12 @@
 import React from 'react';
 import "./Blog.css";
+import BlogFooter from './blogfooter/BlogFooter';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     return (
-        <section className="blog-section bg-white bg-[radial-gradient(grey_1px,transparent_1px)] [background-size:30px_30px]">
-          <div className="blog-header">
+      <section className="blog-section bg-blog-dot-pattern">
+        <div className="blog-header">
               <div className="header-bg">
                   <h2 className="blog-title">Welcome to my blog.</h2>
                   <p className="blog-subtitle">Explore my latest projects, posts, and analyses.</p>
@@ -17,7 +19,7 @@ const Blog = () => {
           </div>
 
           <div className="featured-posts">
-            <div className="post-card">
+            <Link to="/blog/1" className="post-card">
                 <img src={`${process.env.PUBLIC_URL}/image-classification.jpg`} alt="Classification blog post" className="post-image" />
                 <div className="post-content">
                     <div>
@@ -32,8 +34,8 @@ const Blog = () => {
                       </div>
                     </div>
                 </div>
-            </div>
-            <div className="post-card">
+            </Link>
+            <Link to="/blog/2" className="post-card">
                 <img src={`${process.env.PUBLIC_URL}/portfolio-image.png`} alt="Portfolio blog post" className="post-image" />
                 <div className="post-content">
                     <div>
@@ -47,8 +49,9 @@ const Blog = () => {
                       </div>
                     </div>
                 </div>
-            </div>
+            </Link>
           </div>
+          <BlogFooter />
         </section>
     );
 };
