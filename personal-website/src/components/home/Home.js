@@ -46,9 +46,9 @@ function Home() {
                 View My Projects
               </button>
             </Link>
-            <button className="cta-button" onClick={() => window.location.href = '/blog'}>
+            <a href="#blog" className="cta-button">
               See My Blog
-            </button>
+            </a>
           </div>
           <nav className="icon-list">
             <FaGithub
