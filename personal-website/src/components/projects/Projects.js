@@ -60,13 +60,13 @@ const completedProjects = [
     technologies: ['React', 'Express', 'VS', 'MySQL'],
     image: `${process.env.PUBLIC_URL}/eip.png`
   },
-  {
-    name: 'Extraterrestrial Tracker App',
-    url: 'https://github.com/killianronan/extraterrestrial-celestial-tracker',
-    description: 'Built a web application designed to predict and notify users about upcoming celestial events.',
-    technologies: ['React', 'Express', 'Firebase'],
-    image: `${process.env.PUBLIC_URL}/ect.png`
-  }
+  // {
+  //   name: 'Extraterrestrial Tracker App',
+  //   url: 'https://github.com/killianronan/extraterrestrial-celestial-tracker',
+  //   description: 'Built a web application designed to predict and notify users about upcoming celestial events.',
+  //   technologies: ['React', 'Express', 'Firebase'],
+  //   image: `${process.env.PUBLIC_URL}/ect.png`
+  // }
 ];
 
 const Projects = () => {
@@ -119,6 +119,7 @@ const Projects = () => {
             spaceBetween: 40,
           },
         }}
+        style={{paddingTop: '10px', paddingBottom: '10px'}}
       >
         {completedProjects.map((project, index) => (
           <SwiperSlide key={index}>
