@@ -5,25 +5,6 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 const blogPosts = {
     1: {
-        title: "Celestial Image Classification",
-        date: "Aug 30, 2024",
-        readTime: "5 min read",
-        content: `
-            <h2 id="intro"><strong>Introduction</strong></h2>
-            <p>Learn about how you can train a machine learning model to categorise & determine different types of celestial objects from satellite images.</p>
-            <h2 id="basics"><strong>Basics of Image Classification</strong></h2>
-            <p>This tutorial covers the basics of image classification, the datasets used, and the results obtained.</p>
-            <h2 id="datasets">Datasets Used</h2>
-            <p>We used various satellite images datasets to train the model.</p>
-        `,
-        tags: ["Machine Learning", "AI"],
-        toc: [
-            { id: "intro", title: "Introduction" },
-            { id: "basics", title: "Basics of Image Classification" },
-            { id: "datasets", title: "Datasets Used" }
-        ]
-    },
-    2: {
         title: "Building Your Online Portfolio",
         date: "Aug 15, 2024",
         readTime: "10 min read",
@@ -31,7 +12,7 @@ const blogPosts = {
             <h2 id="intro">Introduction</h2>
 
             <p>
-            In today’s competitive job market, and ever-evolving tech landscape having an online portfolio can aid in showcasing your skills, 
+            In today's competitive job market, and ever-evolving tech landscape having an online portfolio can aid in showcasing your skills, 
             projects, and professional journey in a unique way. It serves as a digital resume that can help you stand out in 
             your field. I recently built & deployed my own personal portfolio website and I wanted to share my process, findings and any tips I'd recommend to other developers
             looking to build one of their own.
@@ -93,7 +74,7 @@ const blogPosts = {
                 <li><strong>Assess Your Skills:</strong> Try choosing a framework that aligns with your current skill level and the proficiencies you 
                 want to highlight. If you're comfortable writing code in JavaScript for example, React might be a good choice. If you want to showcase full-stack capabilities, 
                 consider a full-stack framework like Next.js. Portfolio websites are generally static front-end applications which don't require server-side processing. </li>
-                <li><strong>Consider Future Upkeep & Maintenance:</strong> Choose a tool that you’ll be comfortable maintaining with in the future & updating 
+                <li><strong>Consider Future Upkeep & Maintenance:</strong> Choose a tool that you'll be comfortable maintaining with in the future & updating 
                 as your skills grow and your portfolio evolves.</li>
                 <li><strong>Explore Examples:</strong> Most widely-used framworks have active communities, with vast resources & documentation on 
                 tutorials, and external libraries which can aid you in the development process. I'd suggest you explore a range of different 
@@ -153,8 +134,9 @@ const blogPosts = {
             <h2 id="development-implementation">Development and Implementation</h2>
 
             <p>
-            Ensure you choose an appropriate code editor to develop your portfolio in. I'm used to front-end development with <a href="https://code.visualstudio.com/"
-            target="_blank" rel="noopener noreferrer">Visual Studio Code</a>, so that's what I chose. Utilising version control is essential, so familiarise
+            Ensure you choose an appropriate code editor to develop your portfolio with. I'm used to front-end development with <a href="https://code.visualstudio.com/"
+            target="_blank" rel="noopener noreferrer">Visual Studio Code</a>, but currently I'm using a new AI integrated editor forked from VS Code named <a href="https://www.cursor.com/"
+            target="_blank" rel="noopener noreferrer">Cursor</a> which I've found to be very helpful. Utilising version control is essential, so familiarise
             yourself with the basics of <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git</a> and use it with a project storage platform
             such as <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> or <a href="https://bitbucket.org/"
             target="_blank" rel="noopener noreferrer">BitBucket</a> for collaboration and hosting your code. As you develop your portfolio, make 
@@ -162,46 +144,62 @@ const blogPosts = {
             changes but can also allow you to revert to any previous versions easily, if you encounter bugs or need to backtrack.
             </p>
 
-            <h3 id="brand">Establishing Your Personal Brand</h3>
-            <p>Your portfolio should reflect your unique personal brand. This includes:</p>
+            <h3 id="brand">Leverage The Power of AI</h3>
+
+            <img src='/personal-website/ai.jpg' alt="AI image" style="border-radius: 10px; "/>
+            </br>
+
+            <p>Modern software development & its future is infused with AI, meaning you should be using it to help you develop your portfolio and any other coding ventures. 
+            If you are not harnessing the power of AI, then you are behind the curve. It will help speed up your development process and make you more productive. Some examples of 
+            how AI can help you is with things like:</p>
             <ul>
-                <li><strong>Consistency:</strong> Maintain a cohesive look across all sections of your portfolio by using consistent colors, typography, and design elements.</li>
-                <li><strong>Design Mockups:</strong> Experiment with different designs before coding by using tools like <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">Figma</a> or <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener noreferrer">Adobe XD</a>.</li>
-                <li><strong>Styling:</strong> Consider using plain CSS, CSS modules, or CSS-in-JS libraries like <a href="https://styled-components.com/" target="_blank" rel="noopener noreferrer">Styled Components</a> to style your portfolio. Choose the approach that best fits your project and workflow.</li>
+                <li><strong>Learning:</strong> AI can be a valuable resource for learning new technologies you haven't used before. It can provide you with personalized tutorials, 
+                detailed documentation, and relevant code examples which can help you understand and implement new concepts effectively & efficiently.</li>
+                <li><strong>Brainstorming and Planning:</strong> If you ever feel like you're hitting a brick wall, AI can help with brainstorming and getting you back on track by generating
+                creative ideas for your portfolio's design and content. It can also help you with both the high & low level architecture design of your project by creating outlines, 
+                timelines, and task lists. This automation can help with ensuring there is a structured approach to your work.</li>
+                <li><strong>Environment Setup:</strong> AI can fast-track your development environment setup by providing pre-configured templates and configuration files. 
+                This will allow you to quickly get started on your development without having to spend an excessive amount of time on the initial setup.</li>
+                <li><strong>Generating, Debugging & Optimising Code:</strong> As stated before, AI can significantly enhance your coding efficiency by generating complex snippets or entire
+                modules based on your requirements. It can also assist in debugging errors, identifying bugs and suggesting fixes. Furthermore, you can use it for optimizing your code
+                to yield better performance.</li>
             </ul>
 
-            <h3 id="navigation">Designing for Navigation and Responsiveness</h3>
-            <p>A well-designed navigation system enhances user experience:</p>
+            <h3 id="portfolio-tips">Essential Aspects to an Impressive Portfolio</h3>
+            
+            <p>When developing your portfolio there are several key aspects which you need to be considering:</p>
             <ul>
-                <li><strong>Navigation:</strong> Ensure that your portfolio is easy to navigate with clear, intuitive menus. Implement a sticky header so that visitors can access the navigation menu at all times.</li>
-                <li><strong>Routing:</strong> Use a framework like react-router-dom to create a single-page application (SPA) with smooth transitions between sections.</li>
-                <li><strong>Responsiveness:</strong> Ensure your portfolio looks great on all devices, from smartphones to desktops. Test your site on multiple devices to provide a consistent experience. You can use CSS frameworks like <a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer">Bootstrap</a> or <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> to speed up development and ensure responsive design.</li>
+                <li><strong>Consistency:</strong> Try to use consistent colors, fonts, and design elements across all sections. 
+                This helps to create a cohesive and professional look, making your portfolio more visually appealing.</li>
+                <li><strong>Design Mockups:</strong> It may not be necessary for a personal portfolio website, butyou can
+                experiment with mockup designs using tools such as <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">Figma</a>
+                or <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener noreferrer">Adobe XD</a>. 
+                Mockups are useful as they can help you visualize the final product and make design adjustments before coding.</li>
+                <li><strong>Styling & Responsiveness:</strong> For most web pages, the styling is controlled by plain CSS, CSS modules, or CSS integrated JS libraries such as 
+                <a href="https://styled-components.com/" target="_blank" rel="noopener noreferrer">Styled Components</a>. 
+                Deciding on a consistent styling approach ensures maintainable and scalable visuals. Keep in mind, you'll want to ensure your
+                portfolio is accessible and functional on all devices. There are CSS layouts like <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">Flexbox</a> 
+                and frameworks like <a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+                or <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">Tailwind CSS</a> which can help with aligning
+                and styling your portfolio components.</li>
+                <li><strong>Navigation & Structure:</strong> Ensure your portfolio has intuitive navigation, with clear menus
+                and a header. Having seamless navigation improves user experience by making it easy for visitors to find
+                information and browse your site. Remember to break down your content into different components, some reusable (cards) and some not (header, footer), as this will make your 
+                codebase more modular and easier to maintain.</li>
+                <li><strong>Animations & Visuals:</strong> Although this may be optional, depending on the type of portfolio you 
+                want to build, I'd recommend using high-quality icons from providers such as <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>
+                or <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>. High resolution images can also be found on websites like 
+                <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a> or <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.
+                Strong visuals can enhance the overall look and feel of your portfolio.</li>
             </ul>
 
-            <h3 id="component-architecture">Building Modular Components</h3>
-            <p>Adopting a modular approach makes it easier to manage and update your portfolio:</p>
-            <ul>
-                <li><strong>Reusable Components:</strong> Break down your portfolio into reusable components. For example, create separate components for the header, footer, project cards, and blog posts. This modular approach is particularly relevant for modern JavaScript frameworks like React or Vue.js.</li>
-            </ul>
+            <h3 id="resources">Inspiration and Examples</h3>
 
-            <h3 id="visuals">Enhancing Visual Appeal</h3>
-            <p>Visual elements can significantly impact how users perceive your portfolio:</p>
-            <ul>
-                <li><strong>Images and Icons:</strong> Use high-quality icons from libraries like <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a> or <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer">Flaticon</a>. For stock photos, check out platforms like <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a> or <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a>.</li>
-                <li><strong>Animations:</strong> Integrate smooth, modern animations using <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">Framer Motion</a> to enhance user experience without overwhelming it. For example, you can animate project cards as they come into view or add hover effects to navigation links.</li>
-            </ul>
+            <p>If you ever feel like you're hitting a brick wall, look at other examples to draw inspiration from. There are plenty of
+            examples of other developer portfolios online. You can find some useful resources below:</p>
 
-            <h3 id="animations">Final Touches</h3>
-            <p>After the core development, it's time to add the final touches:</p>
-            <ul>
-                <li><strong>Additional Animations:</strong> Use <a href="https://www.framer.com/motion/" target="_blank" rel="noopener noreferrer">Framer Motion</a> to add more complex animations, like transitions between sections or subtle hover effects that enhance user interactivity.</li>
-            </ul>
+            <h4>Portfolio Examples</h4>
 
-            <h2 id="resources">Inspiration and Examples</h2>
-            <p>If you ever feel like you're hitting a brick wall, look at other examples to draw inspiration from. There a hundreds of thousands of
-            examples of other developer portfolios online. Here are some useful resources you can use to explore:</p>
-    
-            <h3>Portfolio Examples</h3>
             <ul>
                 <li><a href="https://www.awwwards.com/websites/portfolio/" target="_blank" rel="noopener noreferrer">Awwwards</a>: A showcase of award-winning websites, including portfolios.</li>
                 <li><a href="https://www.bestfolios.com/" target="_blank" rel="noopener noreferrer">Bestfolios</a>: A curated collection of portfolios by designers and developers.</li>
@@ -209,33 +207,70 @@ const blogPosts = {
                 <li><a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">Behance</a>: An online community showcasing creative work in various fields.</li>
             </ul>
     
-            <h3>Helpful Tutorials</h3>
+            <p>If you are not sure how to get started, You can find some resources to help you begin with some different web development
+            frameworks below.</p>
+
+            <h4>Tutorials and Guides</h4>
+
             <ul>
-                <li><a href="https://reactjs.org/tutorial/tutorial.html" target="_blank" rel="noopener noreferrer">React Official Tutorial</a>: Learn the basics of React and how to build simple applications.</li>
-                <li><a href="https://www.freecodecamp.org/news/the-react-handbook-b71c27b0a795/" target="_blank" rel="noopener noreferrer">FreeCodeCamp's React Handbook</a>: A comprehensive guide to getting started with React.</li>
-                <li><a href="https://www.codecademy.com/learn/react-101" target="_blank" rel="noopener noreferrer">Codecademy React Course</a>: An interactive course that teaches React fundamentals.</li>
-                <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="noopener noreferrer">CSS Tricks Flexbox Guide</a>: Learn how to use Flexbox for layout and alignment.</li>
+                <li><a href="https://reactjs.org/tutorial/tutorial.html" target="_blank" rel="noopener noreferrer">React Tutorial</a>: Learn the basics of React and how to build simple applications.</li>
+                <li><a href="https://angular.io/start" target="_blank" rel="noopener noreferrer">Angular Guide</a>: Get started with Angular and learn how to build dynamic web applications.</li>
+                <li><a href="https://nextjs.org/learn" target="_blank" rel="noopener noreferrer">Next.js Guide</a>: Learn how to build server-side rendered React applications with Next.js.</li>
+                <li><a href="https://www.djangoproject.com/start/" target="_blank" rel="noopener noreferrer">Django Guide</a>: A beginner-friendly guide to building web applications with Django.</li>
+                <li><a href="https://guides.rubyonrails.org/getting_started.html" target="_blank" rel="noopener noreferrer">Ruby on Rails Guide</a>: Learn the basics of building web applications with Ruby on Rails.</li>
             </ul>
-                
-            <h2 id="deployment">Deploying Your Portfolio</h2>
-            <p>Once your portfolio is ready, it’s time to deploy it so that it’s accessible to the world. There are several hosting options available:</p>
-    
+            
+            <h2 id="deployment">Deployment</h2>
+
+            <img src='/personal-website/deployment2.png' alt="Deployment image" style="border-radius: 10px; border: 1px solid #000;"/>
+            </br>
+
+            <p>Once your portfolio is ready, it's time to deploy it so that it's accessible to the world. You can use a custom domain with
+            most hosting platforms by purchasing a domain from providers like <a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">Namecheap</a>, <a href="https://www.godaddy.com/en-ca" target="_blank" rel="noopener noreferrer">GoDaddy</a> 
+            or <a href="https://domains.google/" target="_blank" rel="noopener noreferrer">Google Domains</a>. There are several hosting options available:</p>
+
             <ul>
-                <li ><strong>GitHub Pages:</strong> GitHub Pages is a popular choice for deploying static websites. If you’re using GitHub for 
+                <li><strong>GitHub Pages:</strong> <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a> is a popular choice for deploying static websites. If you're using GitHub for 
                 version control, you can easily deploy your portfolio by pushing your code to a GitHub repository and enabling GitHub Pages
-                 in the repository settings. You can use a custom domain with GitHub Pages by purchasing a domain from providers like 
-                 <a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">Namecheap</a> or <a href="https://domains.google/" 
-                 target="_blank" rel="noopener noreferrer">Google Domains</a>.</li> 
-                <li ><strong>Google Cloud:</strong> Google cloud offers</li> 
-                <li ><strong>Netlify:</strong> Netlify is another excellent choice for deploying React apps. It offers continuous deployment, 
-                which means your site will automatically update whenever you push new code to your GitHub repository.Netlify also offers features 
-                like form handling and serverless functions, which can add additional functionality to your portfolio.</li> 
-                <li ><strong>Vercel:</strong> Vercel is known for its simplicity and ease of use, especially for deploying front-end projects. It integrates well with GitHub, providing instant previews and automatic deployments.
-                Vercel also supports custom domains and provides analytics to track your site’s performance. </li> 
+                in the repository settings. You're also given one free custom domain with GitHub Pages so you can use that to deploy
+                your portfolio for free.</li> 
+                <li><strong>Google Cloud:</strong> <a href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer">Google Cloud</a> offers a robust platform for deploying web applications. Google Cloud also provides
+                a free tier with some limited resources which can be used for your personal portfolios.</li> 
+                <li><strong>Amazon Web Services:</strong> <a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">AWS</a> provides a wide range of services for deploying and managing web applications. 
+                Services such as <a href="https://aws.amazon.com/amplify/" target="_blank" rel="noopener noreferrer">Amplify</a>, <a href="https://aws.amazon.com/s3/" target="_blank" rel="noopener noreferrer">S3</a>, or <a href="https://aws.amazon.com/ec2/" target="_blank" rel="noopener noreferrer">EC2</a> can be used to host different types of websites and applications.</li> 
+                <li><strong>Microsoft Azure:</strong> <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer">Azure</a> is another platform which offers various services for deploying web applications. 
+                <a href="https://azure.microsoft.com/en-us/services/app-service/" target="_blank" rel="noopener noreferrer">Azure App Service</a> or <a href="https://azure.microsoft.com/en-us/services/app-service/static/" target="_blank" rel="noopener noreferrer">Static Web Apps</a> can be used to host your portfolio.</li>
             </ul>
+
+            <p> Other than the main options listed above, there are some other platforms like Netlify, Heroku, Vercel, or Surge which can also be used to deploy your portfolio. </p>
     
             <h2 id="conclusion">Conclusion</h2>
-            <p>Building a personal portfolio is a rewarding experience that showcases your skills and helps you stand out in the professional world. By following the steps outlined in this guide, you can create a portfolio that not only reflects your technical abilities but also your personal brand. Remember to keep your portfolio updated with your latest projects and continue refining it as you grow in your career.</p>
+
+            <p>Building a personal portfolio is a rewarding experience that showcases your skills and helps you stand out in the
+            professional world. A well-crafted portfolio not only reflects your technical abilities but also your personal brand,
+            making a lasting impression on potential employers, clients, and collaborators. This blog post was to serve as an 
+            outline on what my approach was to building my own portfolio and what I'd recommend to someone who wanted to build
+            their own. If you plan to do so, remember to:</p>
+            
+            <ul>
+                <li><strong>Keep It Consistent:</strong> Try to ensure that your portfolio maintains a cohesive look and feel, 
+                with a clear structure.</li>
+                <li><strong>Update Regularly:</strong> You should update your portfolio with your latest ventures, projects, skills,
+                and accomplishments regularly. This will help to show that you are active and are continuously improving yourself.
+                As you progress in your career, your portfolio should evolve as you do.</li>
+                <li><strong>Showcase Your Best Work:</strong> Remember to focus on quality over quantity, by highlighting the 
+                projects that best demonstrate your skills and expertise.</li>
+                <li><strong>Include Personalize:</strong> Make your portfolio stand out by adding some personal touches that reflect
+                your personality and your own professional journey.</li>
+                <li><strong>Seek Feedback:</strong> Don't hesitate to ask and be open for feedback from your friends, peers, or other professionals.
+                The peer review process will help you refine and improve your portfolio.</li>
+            </ul>
+            
+            <p> A dynamic and up-to-date portfolio can be a useful tool to possibly open doors to new opportunities and aid career
+            aspirations. Always keep in mind, your portfolio is more than just a collection of your work; it's a showcase of who
+            you are as a person & professional. Investing your time and effort into it will allow you to create the best represenation
+            of yourself that you can create.</p>
+            
         `,
         tags: ["Web Development", "Portfolio"],
         toc: [
@@ -243,8 +278,7 @@ const blogPosts = {
             { id: "why-build", title: "Why Build an Online Portfolio?" },
             { id: "design-planning", title: "Design and Planning" },
             { id: "development-implementation", title: "Development and Implementation" },
-            { id: "resources", title: "Finding Inspiration and Examples" },
-            { id: "deployment", title: "Deploying Your Portfolio" },
+            { id: "deployment", title: "Deployment" },
             { id: "conclusion", title: "Conclusion" }
         ]
     }
@@ -295,6 +329,7 @@ const BlogPost = () => {
                     </div>
                     <img src={`${process.env.PUBLIC_URL}/web-development_2.jpg`} alt="Classification blog post" className="post-image" />
                     <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+                
                 </div>
                 <div className="blog-post-toc">
                     <h3 className='toc-header'><strong>Table of Contents</strong></h3>
@@ -307,6 +342,9 @@ const BlogPost = () => {
                     </ul>
                 </div>
             </div>
+            <footer className="blog-post-footer">
+                <p>&copy; {new Date().getFullYear()} Killian Ronan. All rights reserved.</p>
+            </footer>
         </div>
     );
 };

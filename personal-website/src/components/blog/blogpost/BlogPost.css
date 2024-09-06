@@ -124,6 +124,14 @@
     color: #444;
 }
 
+.blog-post-content h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
 .blog-post-content p {
     font-size: 1.125rem;
     color: #333;
@@ -171,4 +179,13 @@
 .blog-post-tag:hover {
     background-color: rgb(222, 191, 253);
     color: rgb(73, 0, 150);
+}
+
+.blog-post-footer {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 10px; */
+    color: #000;
 }
