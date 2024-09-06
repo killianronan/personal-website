@@ -169,3 +169,19 @@ img.post-image{
   margin-top: 10px;
   align-self: flex-start;
 }
+
+
+@media (max-width: 800px) {
+  .blog-header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .post-card {
+    flex: 0.1 0.9 calc(50% - 10px); 
+    min-width: 350px;
+  }
+  .header-bg {
+    text-align: center;
+  }
+}

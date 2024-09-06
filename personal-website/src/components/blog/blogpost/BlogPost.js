@@ -31,7 +31,7 @@ const blogPosts = {
             </p>
 
             <p>
-            That being said, building an online portfolio is still a valuable exercise. It can help you learn to code, familiarize yourself with a framework, and 
+            That being said, building an online portfolio is still a valuable exercise. It can help you learn to code, familiarise yourself with a framework, and 
             provides you with a platform to showcase your work. Just keep in mind, it should not replace your actual project experience but complement it by 
             highlighting your practical skills and contributions.
             </p>
@@ -153,7 +153,7 @@ const blogPosts = {
             If you are not harnessing the power of AI, then you are behind the curve. It will help speed up your development process and make you more productive. Some examples of 
             how AI can help you is with things like:</p>
             <ul>
-                <li><strong>Learning:</strong> AI can be a valuable resource for learning new technologies you haven't used before. It can provide you with personalized tutorials, 
+                <li><strong>Learning:</strong> AI can be a valuable resource for learning new technologies you haven't used before. It can provide you with personalised tutorials, 
                 detailed documentation, and relevant code examples which can help you understand and implement new concepts effectively & efficiently.</li>
                 <li><strong>Brainstorming and Planning:</strong> If you ever feel like you're hitting a brick wall, AI can help with brainstorming and getting you back on track by generating
                 creative ideas for your portfolio's design and content. It can also help you with both the high & low level architecture design of your project by creating outlines, 
@@ -161,7 +161,7 @@ const blogPosts = {
                 <li><strong>Environment Setup:</strong> AI can fast-track your development environment setup by providing pre-configured templates and configuration files. 
                 This will allow you to quickly get started on your development without having to spend an excessive amount of time on the initial setup.</li>
                 <li><strong>Generating, Debugging & Optimising Code:</strong> As stated before, AI can significantly enhance your coding efficiency by generating complex snippets or entire
-                modules based on your requirements. It can also assist in debugging errors, identifying bugs and suggesting fixes. Furthermore, you can use it for optimizing your code
+                modules based on your requirements. It can also assist in debugging errors, identifying bugs and suggesting fixes. Furthermore, you can use it for optimising your code
                 to yield better performance.</li>
             </ul>
 
@@ -174,7 +174,7 @@ const blogPosts = {
                 <li><strong>Design Mockups:</strong> It may not be necessary for a personal portfolio website, butyou can
                 experiment with mockup designs using tools such as <a href="https://www.figma.com" target="_blank" rel="noopener noreferrer">Figma</a>
                 or <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noopener noreferrer">Adobe XD</a>. 
-                Mockups are useful as they can help you visualize the final product and make design adjustments before coding.</li>
+                Mockups are useful as they can help you visualise the final product and make design adjustments before coding.</li>
                 <li><strong>Styling & Responsiveness:</strong> For most web pages, the styling is controlled by plain CSS, CSS modules, or CSS integrated JS libraries such as 
                 <a href="https://styled-components.com/" target="_blank" rel="noopener noreferrer">Styled Components</a>. 
                 Deciding on a consistent styling approach ensures maintainable and scalable visuals. Keep in mind, you'll want to ensure your
@@ -260,7 +260,7 @@ const blogPosts = {
                 As you progress in your career, your portfolio should evolve as you do.</li>
                 <li><strong>Showcase Your Best Work:</strong> Remember to focus on quality over quantity, by highlighting the 
                 projects that best demonstrate your skills and expertise.</li>
-                <li><strong>Include Personalize:</strong> Make your portfolio stand out by adding some personal touches that reflect
+                <li><strong>Personalise It:</strong> Make your portfolio stand out by adding some personal touches that reflect
                 your personality and your own professional journey.</li>
                 <li><strong>Seek Feedback:</strong> Don't hesitate to ask and be open for feedback from your friends, peers, or other professionals.
                 The peer review process will help you refine and improve your portfolio.</li>
@@ -282,7 +282,6 @@ const blogPosts = {
             { id: "conclusion", title: "Conclusion" }
         ]
     }
-    
 };
 
 const BlogPost = () => {
@@ -327,7 +326,7 @@ const BlogPost = () => {
                             ))}
                         </div>
                     </div>
-                    <img src={`${process.env.PUBLIC_URL}/web-development_2.jpg`} alt="Classification blog post" className="post-image" />
+                    <img src={`${process.env.PUBLIC_URL}/web-development_2.jpg`} alt="Classification blog post" style={{borderRadius: "10px"}} />
                     <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
                 
                 </div>

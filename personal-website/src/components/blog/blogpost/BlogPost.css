@@ -186,6 +186,32 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-top: 10px; */
     color: #000;
+}
+
+@media (max-width: 900px) {
+    .blog-post-container {
+        flex-direction: column;
+    }
+    .blog-post-toc {
+        order: 1; 
+        position: static;
+        margin-top: 30px;
+    }
+    .blog-post-content-container {
+        order: 2; 
+    }
+    .blog-post-footer {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .blog-post-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .blog-post-tags{
+        margin-top: 10px;
+    }
 }
