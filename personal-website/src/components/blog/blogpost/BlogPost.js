@@ -306,6 +306,14 @@ const BlogPost = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [post.toc]);
 
+    const handleTocClick = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setActiveId(id);
+        }
+    };
+
     if (!post) {
         return <p>Post not found</p>;
     }
@@ -328,14 +336,13 @@ const BlogPost = () => {
                     </div>
                     <img src={`${process.env.PUBLIC_URL}/web-development_2.jpg`} alt="Classification blog post" style={{borderRadius: "10px"}} />
                     <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.content }} />
-                
                 </div>
                 <div className="blog-post-toc">
                     <h3 className='toc-header'><strong>Table of Contents</strong></h3>
                     <ul>
                         {post.toc.map((item) => (
                             <li key={item.id} className={activeId === item.id ? "active" : ""}>
-                                <a href={`#${item.id}`}>{item.title}</a>
+                                <button onClick={() => handleTocClick(item.id)}>{item.title}</button>
                             </li>
                         ))}
                     </ul>
