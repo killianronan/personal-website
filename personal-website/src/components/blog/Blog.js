@@ -14,7 +14,7 @@ const Blog = () => {
               <div className='portfolio-avatar'>
                 <img src={`${process.env.PUBLIC_URL}/avatar.jpg`} alt="Killian Ronan" className="image"/>
                 <div className="profile-name">Killian Ronan</div> 
-                <a className="cta-button" href="/personal-website"> See My Portfolio</a>
+                <a className="cta-button" href="/"> See My Portfolio</a>
               </div>
           </div>
 

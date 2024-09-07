@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://killianronan.github.io/personal-website",
+  "homepage": "https://www.killianronan.dev",
   "dependencies": {
     "@fontsource/league-spartan": "^4.5.13",
     "@testing-library/jest-dom": "^5.16.5",

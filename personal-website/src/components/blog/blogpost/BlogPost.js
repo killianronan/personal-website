@@ -55,7 +55,7 @@ const blogPosts = {
 
             <h3>Choose a Framework</h3>
 
-            <img src='/personal-website/frontend-frameworks.png' alt="Frontend framework examples" style="border-radius: 10px; "/>
+            <img src='/frontend-frameworks.png' alt="Frontend framework examples" style="border-radius: 10px; "/>
             </br>
 
             <p>
@@ -85,7 +85,7 @@ const blogPosts = {
 
             <h3>Target Your Audience</h3>
 
-            <img src='/personal-website/targetaudience.png' alt="Identifying Audience" style="border-radius: 10px; "/>
+            <img src='/targetaudience.png' alt="Identifying Audience" style="border-radius: 10px; "/>
             </br>
 
             <p>An important aspect to the design of your portfolio is to focus on the people who will be viewing it, as they are who you want to
@@ -146,7 +146,7 @@ const blogPosts = {
 
             <h3 id="brand">Leverage The Power of AI</h3>
 
-            <img src='/personal-website/ai.jpg' alt="AI image" style="border-radius: 10px; "/>
+            <img src='/ai.jpg' alt="AI image" style="border-radius: 10px; "/>
             </br>
 
             <p>Modern software development & its future is infused with AI, meaning you should be using it to help you develop your portfolio and any other coding ventures. 
@@ -222,7 +222,7 @@ const blogPosts = {
             
             <h2 id="deployment">Deployment</h2>
 
-            <img src='/personal-website/deployment2.png' alt="Deployment image" style="border-radius: 10px; border: 1px solid #000;"/>
+            <img src='/deployment2.png' alt="Deployment image" style="border-radius: 10px; border: 1px solid #000;"/>
             </br>
 
             <p>Once your portfolio is ready, it's time to deploy it so that it's accessible to the world. You can use a custom domain with
