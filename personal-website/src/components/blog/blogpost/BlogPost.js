@@ -6,7 +6,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 const blogPosts = {
     1: {
         title: "Building Your Online Portfolio",
-        date: "Aug 15, 2024",
+        date: "Sep 06, 2024",
         readTime: "10 min read",
         content: `
             <h2 id="intro">Introduction</h2>
