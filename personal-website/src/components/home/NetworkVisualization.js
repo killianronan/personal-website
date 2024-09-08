@@ -118,7 +118,7 @@ const NetworkVisualization = () => {
       requestAnimationFrame(animate);
     }
 
-    document.addEventListener('mousemove', (event) => {
+    function updateMousePosition(event) {
       const rect = canvas.getBoundingClientRect();
       mousePosition.x = event.clientX - rect.left;
       mousePosition.y = event.clientY - rect.top;
@@ -128,7 +128,24 @@ const NetworkVisualization = () => {
       } catch (error) {
         console.error(error);
       }
-    });
+    }
+
+    function updateTouchPosition(event) {
+      const rect = canvas.getBoundingClientRect();
+      const touch = event.touches[0];
+      mousePosition.x = touch.clientX - rect.left;
+      mousePosition.y = touch.clientY - rect.top;
+      try {
+        dots.array[0].x = mousePosition.x;
+        dots.array[0].y = mousePosition.y;
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    document.addEventListener('mousemove', updateMousePosition);
+    document.addEventListener('touchstart', updateTouchPosition);
+    document.addEventListener('touchmove', updateTouchPosition);
 
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
@@ -138,6 +155,12 @@ const NetworkVisualization = () => {
 
     createDots();
     animate();
+
+    return () => {
+      document.removeEventListener('mousemove', updateMousePosition);
+      document.removeEventListener('touchstart', updateTouchPosition);
+      document.removeEventListener('touchmove', updateTouchPosition);
+    };
   }, []);
 
   return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full pointer-events-none" />;

@@ -27,7 +27,7 @@ const Blog = () => {
                       <p className="post-excerpt">This tutorial will give you insights into the steps needed to create your own personal portfolio website.</p>
                     </div>
                     <div className="post-footer">
-                      <span className="post-meta">Jun 25, 2024 • 12 min read</span>
+                      <span className="post-meta">Sep 06, 2024 • 10 min read</span>
                       <div className="tags">
                         <span className="tag">Web Development</span>
                       </div>
